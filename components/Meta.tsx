@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import react, { ReactNode } from 'react';
 
 interface MetaInfo {
   title: string;
@@ -15,7 +14,7 @@ const Meta = ({ title, keywords, description }: MetaInfo) => {
       <meta name="description" content={description} />
       <meta charSet="utf-8" />
       <link rel="icon" href="/favicon.ico" />
-      <title>Anwana Ntofon | Web Developer</title>
+      <title>{title}</title>
     </Head>
   );
 };
