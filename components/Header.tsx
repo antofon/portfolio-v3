@@ -6,18 +6,18 @@ import headerStyles from '../styles/Header.module.css';
 const Header = () => {
   return (
     <div className={headerStyles.container}>
-      <p className={headerStyles.description}>
+      <p className={headerStyles.sectionSubtitle}>
         {"Let's"} build something together
       </p>
-      <h1 className={headerStyles.title}>
+      <h1 className={headerStyles.sectionTitle}>
         Hi, {"I'm"} <span className={headerStyles.name}>Anwana</span>
         <br />A Front-End Web Developer
       </h1>
 
-      <p>
-        {"I'm"} a Front-End Web Weveloper speicializing in building excepiotnal
-        digital experiences. Currently, {"I'm"} focused on building resonseive
-        front-end appliation while learning back-end technologiess.
+      <p className={headerStyles.sectionDescription}>
+        {"I'm"} a Front-End Web Weveloper speicializing in building exceptional
+        digital experiences. Currently, {"I'm"} focused on building responsive
+        front-end applications while learning back-end technologies.
       </p>
 
       <div className={headerStyles.socials}>
