@@ -36,8 +36,8 @@ const skillsData: Skills[] = [
     skillsTitle: 'Node.js',
   },
   {
-    skillsIcon: '/assets/images/skills/git-original.svg',
-    skillsTitle: 'Git',
+    skillsIcon: '/assets/images/skills/sass-original.svg',
+    skillsTitle: 'Sass',
   },
 ];
 
