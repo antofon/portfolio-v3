@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaLinkedinIn, FaGithub, FaRegEnvelope } from 'react-icons/fa';
+import { FaLinkedinIn, FaGithub, FaCodepen } from 'react-icons/fa';
 import headerStyles from '../styles/Header.module.css';
 // import homeStyles from "../styles/Home.module.css"
 
@@ -40,8 +40,8 @@ const Header = () => {
           </a>
         </div>
         <div>
-          <a href="mailto:anwanantofon@gmail.com" rel="noopener noreferrer" className={headerStyles.icon}>
-            <FaRegEnvelope />
+          <a href="https://codepen.io/antofon" rel="noopener noreferrer" className={headerStyles.icon}>
+            <FaCodepen />
           </a>
         </div>
       </div>
