@@ -1,12 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import navStyles from '../styles/Nav.module.css';
 
 const Navbar = () => {
+  const [nav, setNav] = useState(false);
+  const [shadow, setShadow] = useState(false);
+
+  const handleNav = (): void => {
+    setNav(!nav);
+  };
+
+  useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY >= 90) {
+        setShadow(true);
+      } else {
+        setShadow(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleShadow);
+  }, []);
+
   return (
-    <nav className={navStyles.navbar}>
-      <div >
+    <nav className={shadow ? navStyles.shadow : navStyles.navbar}>
+      <div>
         <Image
           src="/../public/assets/images/logo-v2.png"
           alt="logo"
@@ -14,23 +33,29 @@ const Navbar = () => {
           height="100"
         />
       </div>
-      <ul className={navStyles.links}>
-        <li className={navStyles.link}>
-          <Link href="/">Home</Link>
-        </li>
-        <li className={navStyles.link}>
-          <Link href="/about">About</Link>
-        </li>
-        <li className={navStyles.link}>
-          <Link href="/skills">Skills</Link>
-        </li>
-        <li className={navStyles.link}>
-          <Link href="/projects">Projects</Link>
-        </li>
-        <li className={navStyles.link}>
-          <Link href="/contact">Contact</Link>
-        </li>
-      </ul>
+      <div>
+        <ul className={navStyles.links}>
+          <Link href="/">
+            <li className={navStyles.link}>Home</li>
+          </Link>
+
+          <Link href="#about">
+            <li className={navStyles.link}>About</li>
+          </Link>
+
+          <Link href="#skills">
+            <li className={navStyles.link}>Skills</li>
+          </Link>
+
+          <Link href="#projects">
+            <li className={navStyles.link}>Projects</li>
+          </Link>
+
+          <Link href="#contact">
+            <li className={navStyles.link}>Contact</li>
+          </Link>
+        </ul>
+      </div>
     </nav>
   );
 };
