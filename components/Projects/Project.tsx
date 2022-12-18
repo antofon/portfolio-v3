@@ -2,7 +2,7 @@ import Image from 'next/image';
 import projectStyles from '../../styles/Projects/Project.module.css';
 import { Projects } from '../../projectsData';
 
-const Project = ({ projectsImage, projectsTitle }: Projects) => {
+const Project = ({ projectsImage, projectsTitle, projectsStack }: Projects) => {
   return (
     <div>
       <div className={projectStyles.card}>
@@ -14,6 +14,11 @@ const Project = ({ projectsImage, projectsTitle }: Projects) => {
             height={500}
             className={projectStyles.img}
           ></Image>
+          <div className={projectStyles.middle}>
+            <p>{projectsTitle}</p>
+            <p>{projectsStack}</p>
+            <a href="#" className={projectStyles.link}>More Info</a>
+          </div>
         </div>
       </div>
     </div>

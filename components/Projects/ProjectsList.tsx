@@ -9,6 +9,7 @@ const ProjectsList = ({ projects }: ProjectsProps) => {
         <Project
           projectsImage={project.projectsImage}
           projectsTitle={project.projectsTitle}
+          projectsStack={project.projectsStack}
           key={index}
         />
       ))}
