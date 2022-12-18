@@ -4,28 +4,33 @@ export interface ProjectsProps {
 export interface Projects {
   projectsImage: string;
   projectsTitle: string;
+  projectsStack: string;
 }
 
 const projectsData: Projects[] = [
   {
     projectsImage:
       '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
-    projectsTitle: 'HTML',
+    projectsTitle: 'Portfolio Website',
+    projectsStack: 'React/CSS/Next.js',
   },
   {
     projectsImage:
       '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
-    projectsTitle: 'CSS',
+    projectsTitle: 'StemReads',
+    projectsStack: 'React/Sass/Firebase',
   },
   {
     projectsImage:
       '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
-    projectsTitle: 'JavaScript',
+    projectsTitle: 'Wikipedia Viewer',
+    projectsStack: 'HTML/CSS/JavaScript/Wikipedia API',
   },
   {
     projectsImage:
       '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
-    projectsTitle: 'TypeScript',
+    projectsTitle: 'Twitch Streamers',
+    projectsStack: 'HTML/CSS/JavaScript/Twitch API',
   },
 ];
 
