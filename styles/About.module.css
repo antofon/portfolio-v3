@@ -11,7 +11,7 @@
 .container {
   /* margin-top:500px; */
   padding: 250px 0 0 0;
-  height: 1000px;
+  height: auto;
 }
 
 .sectionTitle {
@@ -50,6 +50,12 @@
   text-decoration: underline;
 }
 
+@media screen and (min-width: 768px) {
+  .container {
+    height: 1000px;
+  }
+}
+
 @media screen and (min-width: 1008px) {
   .grid {
     grid-template-columns: 1.5fr 1fr;
@@ -58,5 +64,11 @@
 
   .img {
     width: 500px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    height: 800px;
   }
 }
