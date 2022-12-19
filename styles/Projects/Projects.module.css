@@ -30,7 +30,7 @@
   }
 
   .container {
-    height: 900px;
+    /* height: 900px; */
     padding: 800px 0 0 0;
 
   }
@@ -39,6 +39,7 @@
 @media screen and (min-width: 1008px) {
   .container {
     padding: 500px 0 0 0;
+    height: 1500px;
   }
 }
 @media screen and (min-width: 1400px) {
