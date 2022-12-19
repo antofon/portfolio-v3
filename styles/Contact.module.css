@@ -1,0 +1,73 @@
+.container {
+  height: auto;
+  padding: 500px 0 0 0;
+  /* z-index: 4; */
+}
+
+.sectionTitle {
+  text-transform: uppercase;
+  color: #38b6ff;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.sectionDescription {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+.grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+.img {
+  border-radius: 10px;
+}
+.connectContainer {
+  height: auto;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0px 20px rgb(0 0 0 / 15%);
+  display: inline-block;
+}
+.connectText {
+  text-transform: uppercase;
+}
+/* Socials */
+.socials {
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
+  margin: auto;
+}
+
+.icon {
+    border-radius: 50%;
+    background: #fff;
+    color: #38b6ff;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 65px;
+    cursor: pointer;
+    box-shadow: 0 8px 9px #9ca3af;
+    transition: all 0.3s;
+  }
+  
+  .icon:hover {
+    transform: scale(1.05);
+  }
+@media screen and (min-width: 768px) {
+  .container {
+    height: 800px;
+    /* padding: 250px 0 0 0; */
+  }
+}
+@media screen and (min-width: 1008px) {
+  .container {
+    padding: 250px 0 0 0;
+  }
+}
