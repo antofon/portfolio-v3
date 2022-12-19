@@ -1,23 +1,32 @@
-.grid {
+/* .grid {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.container {
   height: 800px;
-  position: relative;
-}
+} */
 
 .subtitle {
   text-transform: uppercase;
   color: #38b6ff;
 }
 
-/* .container {
-  
-  width: 50%;
-} */
+.title {
+  /* font-size: 22px; */
+  font-size: 1.3rem;
+  /* font-size: 28px; */
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+}
+
+.stack {
+  font-size: 1.1rem;
+  padding-top: 0;
+  color: #fff;
+}
 
 .middle {
   /* transition: 0.5s ease; */
@@ -26,15 +35,11 @@
   z-index: 1;
   top: 50%;
   left: 50%;
+  width: 100%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
-
-/* .imageCol:hover {
-  opacity: 0.3;
-  background-color: blue;
-} */
 
 .imageCol:hover .middle {
   opacity: 1;
@@ -45,9 +50,14 @@
   color: #000;
   border-radius: 5px;
   font-size: 16px;
-  padding: 16px 32px;
+  padding: 12px 30px;
   transition: all 0.3s;
+  display: inline-block;
+  font-weight: bold;
+  margin-top: 8px;
+  letter-spacing: 1px;
 }
+
 .link:hover {
   opacity: 0.7;
 }
@@ -64,7 +74,7 @@
   background-color: #fff;
   box-shadow: 0 0px 20px rgb(0 0 0 / 15%);
   position: relative;
-  z-index: 1
+  z-index: 1;
 }
 
 .imageCol:after {
@@ -74,17 +84,19 @@
   height: 100%;
   top: 0;
   left: 0;
-  opacity: 1;
+  opacity: 0.5;
   /*  keep if don't want gradient background overlay not widely compatabile cross browser */
   /*transition: all 0.5s;
   -webkit-transition: all 0.5s; */
   border-radius: 10px;
 }
+
 .imageCol:hover:after {
   /*  keep if don't want gradient background overlay not widely compatabile cross browser */
   /* background: #38b6ff; */
-  background: linear-gradient(135deg, #38b6ff, #fff);
-  opacity: 0.8;
+  background: linear-gradient(90deg, #2373a2, #38b6ff);
+  transition: 0.4s ease;
+  opacity: 0.9;
 }
 
 /* .card {
@@ -105,40 +117,41 @@
   object-fit: cover;
 }
 
-/* .card:hover,
-  .card:focus,
-  .card:active {
-    color: #0070f3;
-    border-color: #0070f3;
-  } */
-
-/* .card h2 {
-    margin: 0 0 1rem 0;
-    font-size: 1.5rem;
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 1.75rem;
+    margin-top: 1rem;
   }
-  
-  .card p {
-    margin: 0;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    font-weight:bold
-  } */
+  .stack {
+    font-size: 1.4rem;
+  }
+
+  .link {
+    font-size: 1.1rem;
+  }
+}
 
 @media screen and (min-width: 1008px) {
-  .grid {
+  /* .grid {
     align-items: center;
     display: grid;
-    /* justify-content: space-evenly;
-      justify-items: center;
-      align-content: space-evenly;
-      align-items: center; */
     grid-template-columns: auto auto;
-    /* grid-gap: 10px; */
-    /* flex-wrap: wrap; */
     max-width: 1200px;
     width: 100%;
     margin: auto;
     grid-template-columns: 1.5fr 1fr;
     grid-gap: 0 50px;
+  } */
+
+  .title {
+    font-size: 28px;
+    margin-top: 16px;
+  }
+  .stack {
+    font-size: 22px;
+  }
+
+  .link {
+    font-size: 18px;
   }
 }

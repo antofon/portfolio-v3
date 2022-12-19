@@ -15,8 +15,8 @@ const Project = ({ projectsImage, projectsTitle, projectsStack }: Projects) => {
             className={projectStyles.img}
           ></Image>
           <div className={projectStyles.middle}>
-            <p>{projectsTitle}</p>
-            <p>{projectsStack}</p>
+            <p className={projectStyles.title}>{projectsTitle}</p>
+            <p className={projectStyles.stack}>{projectsStack}</p>
             <a href="#" className={projectStyles.link}>More Info</a>
           </div>
         </div>
