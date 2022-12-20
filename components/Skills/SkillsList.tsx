@@ -6,7 +6,6 @@ const SkillsList = ({ skills }: SkillsProps) => {
   return (
     <div className={skillsListStyles.container}>
       {skills.map((skill, index) => {
-        console.log(skill);
         return (
           <Skill
             key={index}
