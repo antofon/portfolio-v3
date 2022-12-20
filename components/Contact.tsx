@@ -174,6 +174,7 @@ const Contact = () => {
               type="text"
               id="subject"
               name="subject"
+              maxLength={50}
               value={toSend.subject}
               className={contactStyles.formInput}
               onChange={handleInput}
@@ -189,6 +190,7 @@ const Contact = () => {
               id="message"
               cols={30}
               rows={10}
+              maxLength={1000}
               required
               value={toSend.message}
               className={contactStyles.formMessage}
