@@ -172,17 +172,24 @@
   transform: scale(1.05);
 }
 
+.successMessage {
+  margin: 0;
+  padding-top: 2.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #23873f;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     height: 1800px;
   }
-  
 }
 
 @media screen and (min-width: 1008px) {
   .container {
     padding: 250px 0 0 0;
-    height:800px
+    height: 800px;
   }
   .wrapper {
     flex-direction: row;
@@ -193,5 +200,9 @@
   .formContainer {
     margin-top: 0;
     width: 75%;
+  }
+  .successMessage {
+    padding-top: 40px;
+    font-size: 20px;
   }
 }
