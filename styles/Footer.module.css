@@ -1,15 +1,28 @@
 .footer {
-    display: flex;
-    flex: 1;
-    padding: 2rem 0;
-    border-top: 1px solid #eaeaea;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex: 1;
+  padding: 1.2rem 0;
+  border-top: 1px solid #eaeaea;
+  /* border-top: 1px solid #cccaca; */
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  height: auto;
+}
+
+.footerText {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    margin-top: 40rem;
   }
-  
-  .footer a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
+}
+
+@media screen and (min-width: 1008px) {
+  .footer {
+    margin: 400px 0 0 0;
   }
+}
