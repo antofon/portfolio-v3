@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import Image from 'next/image';
-import Router, { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 import contactStyles from '../styles/Contact.module.css';
 import contactImg from '../public/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg';
 import { FaLinkedinIn, FaGithub, FaCodepen } from 'react-icons/fa';
 
 const Contact = () => {
-  const [subject, setSubject] = useState('');
   const router = useRouter();
   const [toSend, setToSend] = useState({
     from_name: '',
@@ -16,8 +15,22 @@ const Contact = () => {
     reply_to: '',
   });
 
+  const [isFormSubmit, setIsFormSubmit] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
+
   const handleInput = (e: any) => {
-    setToSend({ ...toSend, [e.target.name]: e.target.value });
+    // var regex =
+    //   /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
+    // prevent input of numbers in name field
+    // https://bobbyhadz.com/blog/react-input-only-letters
+    if (e.target.name === 'from_name') {
+      setToSend({
+        ...toSend,
+        [e.target.name]: e.target.value.replace(/[^a-z]/gi, ''),
+      });
+    } else {
+      setToSend({ ...toSend, [e.target.name]: e.target.value });
+    } // don't restrict input
   };
 
   const handleSubmit = (e: any) => {
@@ -27,13 +40,38 @@ const Contact = () => {
       .send('service_z0z1p2k', 'template_cw6wweg', toSend, '9L__hh59T6j2oocvo')
       .then(
         (response) => {
-          console.log('SUCCESS!', response.status, response.text);
+          console.log('SUCCESS!');
         },
         (err) => {
-          console.log('FAILED...', err);
+          console.log('FAILED...');
         }
       );
-    router.push('/');
+
+    // show message after successful submission
+    setIsFormSubmit(!isFormSubmit);
+    //set success message
+    setSuccessMessage('Message sent!');
+
+    //clear form after successful submission
+    setToSend({
+      from_name: '',
+      subject: '',
+      message: '',
+      reply_to: '',
+    });
+
+    // wait 1 second before redirecting to top of page
+    const timer = setTimeout(() => {
+      router.push('/');
+      // clear success message
+      setSuccessMessage('');
+      //upon clearing of form
+      setIsFormSubmit(!isFormSubmit);
+      //remove message block, only text gets cleared
+      document.getElementById('successMessage')?.remove();
+    }, 1000);
+    console.log(`isFormSubmit: ${isFormSubmit}`);
+    return () => clearTimeout(timer);
   };
 
   return (
@@ -105,6 +143,7 @@ const Contact = () => {
               id="name"
               name="from_name"
               required
+              maxLength={20}
               value={toSend.from_name}
               className={contactStyles.formInput}
               onChange={handleInput}
@@ -120,6 +159,7 @@ const Contact = () => {
               id="email"
               name="reply_to"
               required
+              maxLength={30}
               value={toSend.reply_to}
               className={contactStyles.formInput}
               onChange={handleInput}
@@ -134,7 +174,6 @@ const Contact = () => {
               type="text"
               id="subject"
               name="subject"
-              required
               value={toSend.subject}
               className={contactStyles.formInput}
               onChange={handleInput}
@@ -150,6 +189,7 @@ const Contact = () => {
               id="message"
               cols={30}
               rows={10}
+              required
               value={toSend.message}
               className={contactStyles.formMessage}
               onChange={handleInput}
@@ -157,6 +197,11 @@ const Contact = () => {
             <button type="submit" className={contactStyles.button}>
               Send Message
             </button>
+            {isFormSubmit ? (
+              <p id="successMessage" className={contactStyles.successMessage}>
+                {successMessage}
+              </p>
+            ) : null}
           </form>
         </div>
       </div>
