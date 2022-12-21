@@ -7,7 +7,7 @@ const Project = ({
   projectsImage,
   projectsTitle,
   projectsStack,
-  projectsUrl,
+  projectsUrl
 }: Projects) => {
   return (
     <div>

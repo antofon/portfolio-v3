@@ -6,9 +6,8 @@ const Projects = () => {
   return (
     <div id="projects" className={projectsStyles.container}>
       <h2 className={projectsStyles.sectionTitle}>PROJECTS</h2>
-        <p className={projectsStyles.sectionDescription}>What {"I've"} Built</p>
+      <p className={projectsStyles.sectionDescription}>What {"I've"} Built</p>
       <div className={projectsStyles.grid}>
-        
         <ProjectsList projects={projectData} />
       </div>
     </div>
