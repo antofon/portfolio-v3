@@ -24,7 +24,7 @@ const Contact = () => {
     // prevent input of numbers in name field
     // https://bobbyhadz.com/blog/react-input-only-letters
     // if (e.target.name === 'from_name') {
-      //only characters
+    //only characters
     //   setToSend({
     //     ...toSend,
     //     [e.target.name]: e.target.value.replace(/[^a-z]/gi, ''),
@@ -44,21 +44,17 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .send(
-        process.env.SERVICE_ID,
-        process.env.TEMPLATE_ID,
-        toSend,
-        process.env.PUBLIC_ID
-      )
+      .send('service_z0z1p2k', 'template_cw6wweg', toSend, '9L__hh59T6j2oocvo')
       .then(
         (response) => {
           console.log('SUCCESS!');
         },
         (err) => {
+          //add set error here?
+          //err.text
           console.log('FAILED...');
         }
       );
-
     // show message after successful submission
     setIsFormSubmit(!isFormSubmit);
     //set success message
@@ -71,7 +67,7 @@ const Contact = () => {
       message: '',
       reply_to: '',
     });
-
+    
     // wait 1 second before redirecting to top of page
     const timer = setTimeout(() => {
       router.push('/');
