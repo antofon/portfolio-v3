@@ -27,7 +27,7 @@ const Navbar = () => {
     <nav className={shadow ? navStyles.shadow : navStyles.navbar}>
       <div>
         <Image
-          src="/../public/assets/images/logo-v2.png"
+          src="/assets/images/logo-v2.png"
           alt="logo"
           width="100"
           height="100"
