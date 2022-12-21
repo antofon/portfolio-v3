@@ -1,4 +1,4 @@
-import projectPageBodyStyles from '../../styles/ProjectPageBody.module.css';
+import projectPageBodyStyles from '../../styles/ProjectPage/ProjectPageBody.module.css';
 import { FaDotCircle } from 'react-icons/fa';
 import Link from 'next/link';
 import { ProjectPageProps } from '../../projectPageData';
