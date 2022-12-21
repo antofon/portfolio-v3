@@ -23,10 +23,17 @@ const Contact = () => {
     //   /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
     // prevent input of numbers in name field
     // https://bobbyhadz.com/blog/react-input-only-letters
+    // if (e.target.name === 'from_name') {
+      //only characters
+    //   setToSend({
+    //     ...toSend,
+    //     [e.target.name]: e.target.value.replace(/[^a-z]/gi, ''),
+    //   });
+    // }
     if (e.target.name === 'from_name') {
       setToSend({
         ...toSend,
-        [e.target.name]: e.target.value.replace(/[^a-z]/gi, ''),
+        [e.target.name]: e.target.value.replace(/[^\w+( +\w+)*$]/gi, ''),
       });
     } else {
       setToSend({ ...toSend, [e.target.name]: e.target.value });
@@ -37,7 +44,12 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .send('service_z0z1p2k', 'template_cw6wweg', toSend, '9L__hh59T6j2oocvo')
+      .send(
+        process.env.SERVICE_ID,
+        process.env.TEMPLATE_ID,
+        toSend,
+        process.env.PUBLIC_ID
+      )
       .then(
         (response) => {
           console.log('SUCCESS!');
@@ -143,7 +155,7 @@ const Contact = () => {
               id="name"
               name="from_name"
               required
-              maxLength={20}
+              maxLength={30}
               value={toSend.from_name}
               className={contactStyles.formInput}
               onChange={handleInput}
