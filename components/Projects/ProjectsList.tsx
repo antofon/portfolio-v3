@@ -1,4 +1,4 @@
-import Project from './Project';
+import ProjectItem from './ProjectItem';
 import projectsListStyles from '../../styles/Projects/ProjectsList.module.css';
 import { ProjectsProps } from '../../projectsData';
 
@@ -6,10 +6,11 @@ const ProjectsList = ({ projects }: ProjectsProps) => {
   return (
     <div className={projectsListStyles.container}>
       {projects.map((project, index) => (
-        <Project
+        <ProjectItem
           projectsImage={project.projectsImage}
           projectsTitle={project.projectsTitle}
           projectsStack={project.projectsStack}
+          projectsUrl={project.projectsUrl}
           key={index}
         />
       ))}
