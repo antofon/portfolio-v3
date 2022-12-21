@@ -1,0 +1,48 @@
+.doubleChevron {
+  display: flex;
+  max-width: 300px;
+  margin: auto;
+  flex-direction: column;
+}
+
+.container {
+  border-radius: 50%;
+  background: #fff;
+  color: #38b6ff;
+  font-size: 24px;
+  display: flex;
+  position: absolute;
+  bottom: 90px;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  height: 65px;
+  cursor: pointer;
+  box-shadow: 0 8px 9px #9ca3af;
+  transition: all 0.3s;
+}
+
+.chevronContainer {
+    display:flex;
+    flex-direction: column;
+    padding-top:10px;
+
+}
+.container:hover {
+  transform: scale(1.05);
+}
+
+
+.bottomChevron {
+    position: relative;
+    bottom:10px;
+}
+
+@media screen and (min-width: 1008px) {
+    .container {
+    
+        left: 94%;
+      
+      }
+    
+}

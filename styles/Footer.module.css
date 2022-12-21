@@ -8,6 +8,7 @@
   align-items: center;
   margin-top: 2rem;
   height: auto;
+  /* For back to top: position: relative; */
 }
 
 .footerText {
