@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import useWindowDimensions from '../hooks/useWindowDimensions';
 import emailjs from '@emailjs/browser';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
@@ -17,7 +18,12 @@ const Contact = () => {
 
   const [isFormSubmit, setIsFormSubmit] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
-
+  const { width, height } = useWindowDimensions();
+  console.log(width);
+  // if (isBrowser()) {
+  //   let initialWidth = window.innerWidth
+  //   setWidth(initialWidth);
+  // }
   const handleInput = (e: any) => {
     // var regex =
     //   /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
@@ -67,7 +73,7 @@ const Contact = () => {
       message: '',
       reply_to: '',
     });
-    
+
     // wait 1 second before redirecting to top of page
     const timer = setTimeout(() => {
       router.push('/');
@@ -77,6 +83,18 @@ const Contact = () => {
       setIsFormSubmit(!isFormSubmit);
       //remove message block, only text gets cleared
       document.getElementById('successMessage')?.remove();
+
+      //only runs if at desktop size, should not be adding/removing any classes until we get to 2 col layout.
+      if (typeof width !== 'undefined' && width >= 1008) {
+        //add back original class, bringing back original margin top
+        document
+          .querySelector(`.${contactStyles.socialsContainerFormSubmit}`)
+          ?.classList?.add(`${contactStyles.socialsContainer}`);
+        // remove newly added class, removing new margin top
+        document
+          .querySelector(`.${contactStyles.socialsContainerFormSubmit}`)
+          ?.classList?.remove(`${contactStyles.socialsContainerFormSubmit}`);
+      }
     }, 1000);
     console.log(`isFormSubmit: ${isFormSubmit}`);
     return () => clearTimeout(timer);
@@ -105,7 +123,13 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className={contactStyles.socialsContainer}>
+          <div
+            className={
+              isFormSubmit && typeof width !== 'undefined' && width >= 1008
+                ? contactStyles.socialsContainerFormSubmit
+                : contactStyles.socialsContainer
+            }
+          >
             <p className={contactStyles.connectText}>Connect with me</p>
             <div className={contactStyles.socials}>
               <div>
