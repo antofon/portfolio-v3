@@ -27,14 +27,14 @@ const projectPageData: ProjectPage[] = [
   {
     projectPageHeaderImage:
       '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
-    projectsUrl: '/wikipediaapi',
+    projectsUrl: '/wikipedia',
     projectId: 3,
     projectsStack: ['HTML', 'CSS', 'JavaScript', 'Wikipedia API'],
   },
   {
     projectPageHeaderImage:
       '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
-    projectsUrl: '/twitchstreamers',
+    projectsUrl: '/twitch',
     projectId: 4,
     projectsStack: ['HTML', 'CSS', 'JavaScript', 'Twitch API'],
   },
