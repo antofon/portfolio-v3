@@ -1,16 +1,12 @@
 import React from 'react';
-import router from 'next/router';
-import Link from 'next/link';
-import projectData from '../projectsData';
+import projectPageData from '../projectPageData';
 // import portfolioStyles from '../styles/Portfolio.modules.css';
-// import PortfolioHeader from '../components/PortfolioHeader';
-// import PortfolioBody from '../components/PortfolioBody';
-import ProjectPage from '../components/ProjectPage';
+import ProjectPage from '../components/ProjectPage/ProjectPage';
 
 const portfolio = () => {
   return (
     <>
-      <ProjectPage projects={projectData} projectNumber={0} />
+      <ProjectPage projects={projectPageData} projectId={0} />
     </>
   );
 };
