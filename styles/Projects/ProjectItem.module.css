@@ -1,25 +1,10 @@
-/* .grid {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 800px;
-} */
-
-.subtitle {
-  text-transform: uppercase;
-  color: #38b6ff;
-}
-
 .title {
-  /* font-size: 22px; */
   font-size: 1.3rem;
-  /* font-size: 28px; */
   font-weight: bold;
   color: #fff;
   margin-bottom: 0;
-  padding-bottom: 0;
   margin-top: 0;
+  padding-bottom: 0;
 }
 
 .stack {
@@ -35,39 +20,13 @@
   z-index: 1;
   top: 50%;
   left: 50%;
-  width: 100%;
+  width: 220px;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
 
-.imageCol:hover .middle {
-  opacity: 1;
-}
-
-.link {
-  background-color: #fff;
-  color: #000;
-  border-radius: 5px;
-  font-size: 16px;
-  padding: 12px 30px;
-  transition: all 0.3s;
-  display: inline-block;
-  font-weight: bold;
-  margin-top: 8px;
-  letter-spacing: 1px;
-}
-
-.link:hover {
-  opacity: 0.7;
-}
-
-.textCol {
-  /* border:1px solid red; */
-}
-
 .imageCol {
-  /* border:1px solid red; */
   height: 100%;
   padding: 10px;
   border-radius: 10px;
@@ -99,16 +58,28 @@
   opacity: 0.9;
 }
 
-/* .card {
-    padding: 1.5rem;
-    color: inherit;
-    text-decoration: none;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    box-shadow: 0 2px 6px rgb(0 0 0 / 15%);
-  } */
+.imageCol:hover .middle {
+  opacity: 1;
+}
+
+.link {
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  font-size: 16px;
+  /* padding: 12px 30px; */
+  padding: 8px 20px;
+  transition: all 0.3s;
+  display: inline-block;
+  font-weight: bold;
+  /* margin-top: 8px; */
+  margin-top: 5px;
+  letter-spacing: 1px;
+}
+
+.link:hover {
+  opacity: 0.7;
+}
 
 .img {
   border-radius: 10px;
@@ -117,11 +88,23 @@
   object-fit: cover;
 }
 
+@media screen and (min-width: 450px) {
+  .middle {
+    width: 100%;
+  }
+
+  .link {
+    padding: 12px 30px;
+    margin-top: 8px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .title {
     font-size: 1.75rem;
     margin-top: 1rem;
   }
+
   .stack {
     font-size: 1.4rem;
   }
@@ -132,21 +115,11 @@
 }
 
 @media screen and (min-width: 1008px) {
-  /* .grid {
-    align-items: center;
-    display: grid;
-    grid-template-columns: auto auto;
-    max-width: 1200px;
-    width: 100%;
-    margin: auto;
-    grid-template-columns: 1.5fr 1fr;
-    grid-gap: 0 50px;
-  } */
-
   .title {
     font-size: 28px;
     margin-top: 16px;
   }
+
   .stack {
     font-size: 22px;
   }
