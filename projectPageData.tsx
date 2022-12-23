@@ -4,8 +4,10 @@ export interface ProjectPageProps {
 }
 export interface ProjectPage {
   projectPageHeaderImage: string;
-  projectsUrl: string;
-  projectsStack: string[];
+  projectPageUrl: string;
+  projectPageTitle: string;
+  projectDescription: string;
+  projectPageStack: string[];
   projectId: number;
 }
 
@@ -13,30 +15,38 @@ const projectPageData: ProjectPage[] = [
   {
     projectPageHeaderImage:
       '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
-    projectsUrl: '/portfolio',
+    projectPageUrl: '/portfolio',
+    projectPageTitle: 'Portfolio Website',
     projectId: 1,
-    projectsStack: ['React.js', 'Next.js', 'TypeScript', 'CSS'],
+    projectDescription: "This is the third iteration of my Portfolio. It was an exciting challenge for me to apply my Next.js and TypeScript skills to a real-world project.",
+    projectPageStack: ['React.js', 'Next.js', 'TypeScript', 'CSS Modules'],
   },
   {
     projectPageHeaderImage:
       '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
-    projectsUrl: '/stemreads',
+    projectPageUrl: '/stemreads',
+    projectPageTitle: 'StemReads',
+    projectDescription: "This is the third iteration my Portfolio. It was an exciting challenge for me to apply my Next.js and TypeScript skills to a real-world project",
     projectId: 2,
-    projectsStack: ['React.js', 'Sass', 'Firebase', 'CSS'],
+    projectPageStack: ['React.js', 'Sass', 'Firebase', 'CSS'],
   },
   {
     projectPageHeaderImage:
       '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
-    projectsUrl: '/wikipedia',
+    projectPageUrl: '/wikipedia',
+    projectPageTitle: 'Wikipedia Viewer',
+    projectDescription: "This is the third iteration my Portfolio. It was an exciting challenge for me to apply my Next.js and TypeScript skills to a real-world project",
     projectId: 3,
-    projectsStack: ['HTML', 'CSS', 'JavaScript', 'Wikipedia API'],
+    projectPageStack: ['HTML', 'CSS', 'JavaScript', 'Wikipedia API'],
   },
   {
     projectPageHeaderImage:
       '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
-    projectsUrl: '/twitch',
+    projectPageUrl: '/twitch',
+    projectPageTitle: 'Twitch Streamers',
+    projectDescription: "This is the third iteration my Portfolio. It was an exciting challenge for me to apply my Next.js and TypeScript skills to a real-world project",
     projectId: 4,
-    projectsStack: ['HTML', 'CSS', 'JavaScript', 'Twitch API'],
+    projectPageStack: ['HTML', 'CSS', 'JavaScript', 'Twitch API'],
   },
 ];
 
