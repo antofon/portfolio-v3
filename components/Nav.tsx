@@ -41,6 +41,7 @@ const Navbar = () => {
     };
 
     window.addEventListener('scroll', handleShadow);
+    return (): void => window.removeEventListener('scroll', handleShadow);
   }, []);
 
   return (
