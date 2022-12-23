@@ -26,6 +26,10 @@
   margin: 0;
 }
 
+.bodyText {
+  font-size: 1.2rem;
+}
+
 .img {
   border-radius: 10px;
   width: 100%;

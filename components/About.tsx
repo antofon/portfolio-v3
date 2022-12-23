@@ -9,11 +9,11 @@ const About = () => {
         <div className={aboutStyles.textCol}>
         <h2 className={aboutStyles.sectionTitle}>ABOUT</h2>
         <p className={aboutStyles.sectionDescription}>Who I Am</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim
+          <p className={aboutStyles.bodyText}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim
       eget libero in fringilla. Maecenas ultricies fringilla dui sed tincidunt.
       In tincidunt dui libero, sed imperdiet enim auctor sed. Morbi eu feugiat
       est, quis viverra purus. Ut vehicula tortor et quam hendrerit, in commodo</p>
-      <p>neque commodo. Mauris placerat interdum velit, nec placerat libero rutrum
+      <p className={aboutStyles.bodyText}>neque commodo. Mauris placerat interdum velit, nec placerat libero rutrum
       ornare. Praesent vitae lobortis eros. Suspendisse sed mauris quis risus
       pretium eleifend. Duis dapibus nibh lectus, a fringilla purus condimentum
       sed. Cras nec odio leo. Integer sollicitudin arcu non dui elementum
