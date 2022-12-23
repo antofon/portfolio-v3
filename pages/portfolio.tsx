@@ -1,6 +1,4 @@
-import React from 'react';
-import projectPageData from '../projectPageData';
-// import portfolioStyles from '../styles/Portfolio.modules.css';
+import projectPageData from '../data/projectPageData';
 import ProjectPage from '../components/ProjectPage/ProjectPage';
 
 const portfolio = () => {
