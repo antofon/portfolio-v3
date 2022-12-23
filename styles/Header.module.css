@@ -1,18 +1,7 @@
-.sectionTitle a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.sectionTitle a:hover,
-.sectionTitle a:focus,
-.sectionTitle a:active {
-  text-decoration: underline;
-}
-
 .sectionTitle {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 2.3rem;
 }
 
 .sectionTitle,
@@ -29,15 +18,12 @@
 .sectionDescription {
   line-height: 1.5;
   font-size: 1.3rem;
+  width:100%;
+  margin:1rem auto;
 }
 
 .container {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
   text-align: center;
-  /* justify-content: center; */
-  /* height:1100px; */
   max-width: 1000px;
   height: 700px;
   margin: auto;
@@ -50,7 +36,7 @@
 /* Socials */
 .socials {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   max-width: 300px;
   margin: auto;
 }
@@ -72,4 +58,24 @@
 
 .icon:hover {
   transform: scale(1.05);
+}
+
+@media screen and (min-width: 768px) {
+  .socials {
+    justify-content: space-between;
+  }
+  
+  .sectionTitle {
+    font-size: 3rem;
+  }
+
+  .sectionDescription {
+    width: 625px;
+  }
+}
+
+@media screen and (min-width: 1008px) {
+  .sectionTitle {
+    font-size: 4rem;
+  }
 }

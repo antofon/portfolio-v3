@@ -1,7 +1,5 @@
-import Link from 'next/link';
 import { FaLinkedinIn, FaGithub, FaCodepen } from 'react-icons/fa';
 import headerStyles from '../styles/Header.module.css';
-// import homeStyles from "../styles/Home.module.css"
 
 const Header = () => {
   return (
@@ -15,7 +13,7 @@ const Header = () => {
       </h1>
 
       <p className={headerStyles.sectionDescription}>
-        {"I'm"} a Front-End Web Weveloper speicializing in building exceptional
+        {"I'm"} a Front-End Web Developer speicializing in building exceptional
         digital experiences. Currently, {"I'm"} focused on building responsive
         front-end applications while learning back-end technologies.
       </p>
