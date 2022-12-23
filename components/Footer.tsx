@@ -22,7 +22,7 @@ const Footer = () => {
       passive: true,
     });
 
-    return () => {
+    return (): void => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
