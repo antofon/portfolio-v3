@@ -13,8 +13,7 @@ const projectsData: Projects[] = [
     projectsImage:
       '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
     projectsTitle: 'Portfolio Website',
-    projectsStack: 'React.js / Next.js / TypeScript / CSS',
-    // projectsStack: ['React.js', 'Next.js', 'TypeScript', 'CSS'],
+    projectsStack: 'React.js / Next.js / TypeScript / CSS Modules',
     projectsUrl: '/portfolio',
   },
   {
@@ -22,7 +21,6 @@ const projectsData: Projects[] = [
       '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
     projectsTitle: 'StemReads',
     projectsStack: 'React.js / Sass / Firebase',
-    // projectsStack: ['React.js', 'Sass', 'Firebase', 'CSS'],
     projectsUrl: '/stemreads',
   },
   {
@@ -30,15 +28,13 @@ const projectsData: Projects[] = [
       '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
     projectsTitle: 'Wikipedia Viewer',
     projectsStack: 'HTML / CSS / JavaScript / Wikipedia API',
-    // projectsStack: ['HTML', 'CSS', 'JavaScript', 'Wikipedia API'],
     projectsUrl: '/wikipediaapi',
   },
   {
     projectsImage:
-    '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
+      '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
     projectsTitle: 'Twitch Streamers',
     projectsStack: 'HTML / CSS / JavaScript / Twitch API',
-    // projectsStack: ['HTML', 'CSS', 'JavaScript', 'Twitch API'],
     projectsUrl: '/twitchstreamers',
   },
 ];
