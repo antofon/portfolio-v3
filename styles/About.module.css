@@ -9,7 +9,6 @@
 }
 
 .container {
-  /* margin-top:500px; */
   padding: 250px 0 0 0;
   height: auto;
 }
@@ -31,10 +30,6 @@
   border-radius: 10px;
   width: 100%;
   height: auto;
-}
-
-.textCol {
-  /* border:1px solid red; */
 }
 
 .imageCol {
