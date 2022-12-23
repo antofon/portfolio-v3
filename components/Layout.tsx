@@ -13,7 +13,7 @@ const Layout = ({ children }: Props) => {
   return (
     <>
       <Meta />
-      <Nav />
+      {/* <Nav /> */}
       <div className={styles.container}>
         <main className={styles.main}>{children}</main>
       </div>
