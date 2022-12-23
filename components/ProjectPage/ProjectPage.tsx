@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProjectPageProps } from '../../projectPageData';
+import { ProjectPageProps } from '../../data/projectPageData';
 import ProjectPageHeader from './ProjectPageHeader';
 import ProjectPageBody from './ProjectPageBody';
 

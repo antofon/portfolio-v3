@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { ProjectPageProps } from '../../projectPageData';
+import { ProjectPageProps } from '../../data/projectPageData';
 import projectPageHeaderStyles from '../../styles/ProjectPage/ProjectPageHeader.module.css';
 import projectImg from '../../public/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg';
 
