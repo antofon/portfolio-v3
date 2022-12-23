@@ -15,13 +15,7 @@ const About = () => {
       est, quis viverra purus. Ut vehicula tortor et quam hendrerit, in commodo</p>
       <p className={aboutStyles.bodyText}>neque commodo. Mauris placerat interdum velit, nec placerat libero rutrum
       ornare. Praesent vitae lobortis eros. Suspendisse sed mauris quis risus
-      pretium eleifend. Duis dapibus nibh lectus, a fringilla purus condimentum
-      sed. Cras nec odio leo. Integer sollicitudin arcu non dui elementum
-      ultrices. Duis tincidunt erat ut augue tincidunt, sed dapibus purus
-      euismod. Etiam at dapibus dui. Sed eu mauris et mi dapibus vestibulum.
-      Morbi maximus quis lacus in consequat. Sed tortor augue, cursus non
-      scelerisque nec, viverra ut arcu. Aenean eget imperdiet justo. Etiam a
-      venenatis sem. Cras eget nisi sagittis, </p>
+      pretium eleifend. </p>
       <a href="#projects" className={aboutStyles.projectsLink}>Check out some of my latest projects</a>
         </div>
         <div className={aboutStyles.imageCol}>
