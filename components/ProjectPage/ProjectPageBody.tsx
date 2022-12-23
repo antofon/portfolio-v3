@@ -1,10 +1,12 @@
 import projectPageBodyStyles from '../../styles/ProjectPage/ProjectPageBody.module.css';
+import { ProjectPageProps } from '../../data/projectPageData';
 import { FaDotCircle } from 'react-icons/fa';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { ProjectPageProps } from '../../projectPageData';
 
 const ProjectPageBody = ({ projects, projectId }: ProjectPageProps) => {
   const project = projects[projectId];
+  const router = useRouter();
   return (
     <div className={projectPageBodyStyles.projectBody}>
       <div className={projectPageBodyStyles.projectBodyText}>
@@ -13,26 +15,29 @@ const ProjectPageBody = ({ projects, projectId }: ProjectPageProps) => {
         <p className={projectPageBodyStyles.projectDescription}>
           {project.projectDescription}
         </p>
-        {/* <Link href="/#projects" className={projectPageBodyStyles.backButton}>
-          Back
-        </Link> */}
+        {router.asPath === '/portfolio' ? null : (
+          <Link href="/#projects" className={projectPageBodyStyles.backButton}>
+            Back
+          </Link>
+        )}
         <div className={projectPageBodyStyles.buttonContainer}>
           <a
-            href="https://anwanantofon.com"
+            href={project.projectDemoUrl}
             className={projectPageBodyStyles.button}
             rel="noopener noreferrer"
+            target="_blank"
           >
             Demo
           </a>
           <a
-            href=""
+            href={project.projectCodeUrl}
             className={`${projectPageBodyStyles.button} ${projectPageBodyStyles.marginLeft}`}
             rel="noopener noreferrer"
+            target="_blank"
           >
             Code
           </a>
         </div>
-        <div></div>
       </div>
       <div className={projectPageBodyStyles.technologiesContainer}>
         <p className={projectPageBodyStyles.technologiesTitle}>Technologies</p>
