@@ -1,7 +1,7 @@
 import React from 'react';
 import skillStyles from '../../styles/Skills/Skill.module.css';
 import Image from 'next/image';
-import { Skills } from '../../skillsData';
+import { Skills } from '../../data/skillsData';
 
 const Skill = ({ skillsIcon, skillsTitle }: Skills) => {
   return (

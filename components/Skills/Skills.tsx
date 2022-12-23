@@ -1,6 +1,6 @@
 import skillsStyles from '../../styles/Skills/Skills.module.css';
 import SkillsList from './SkillsList';
-import skillsData from '../../skillsData';
+import skillsData from '../../data/skillsData';
 
 const Skills = () => {
   return (

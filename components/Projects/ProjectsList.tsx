@@ -1,6 +1,6 @@
 import ProjectItem from './ProjectItem';
 import projectsListStyles from '../../styles/Projects/ProjectsList.module.css';
-import { ProjectsProps } from '../../projectsData';
+import { ProjectsProps } from '../../data/projectsData';
 
 const ProjectsList = ({ projects }: ProjectsProps) => {
   return (

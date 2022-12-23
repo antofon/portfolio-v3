@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import projectItemStyles from '../../styles/Projects/ProjectItem.module.css';
-import { Projects } from '../../projectsData';
+import { Projects } from '../../data/projectsData';
 
 const Project = ({
   projectsImage,
