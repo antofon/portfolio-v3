@@ -1,4 +1,3 @@
-import React from 'react';
 import skillStyles from '../../styles/Skills/Skill.module.css';
 import Image from 'next/image';
 import { Skills } from '../../data/skillsData';
@@ -14,8 +13,8 @@ const Skill = ({ skillsIcon, skillsTitle }: Skills) => {
           height={75}
         ></Image>
       </div>
-      <div className={skillStyles.text}>
-        <p>{skillsTitle}</p>
+      <div>
+        <p className={skillStyles.skillName}>{skillsTitle}</p>
       </div>
     </div>
   );
