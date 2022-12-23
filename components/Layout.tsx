@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react';
 import styles from '../styles/Layout.module.css';
 import Meta from '../components/Meta';
-import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 
 interface Props {
@@ -13,7 +12,6 @@ const Layout = ({ children }: Props) => {
   return (
     <>
       <Meta />
-      {/* <Nav /> */}
       <div className={styles.container}>
         <main className={styles.main}>{children}</main>
       </div>
