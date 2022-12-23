@@ -5,18 +5,16 @@
   padding: 20px 40px 20px 40px;
   display: inline-block;
   width: 100%;
-  margin-top:75px;
-  /* height:250px; */
+  margin-top: 150px;
 }
 
 .technologiesTitle {
   font-weight: bold;
   text-align: center;
-  /* font-size:1.2rem;
-letter-spacing: 1px; */
   font-size: 18px;
   margin: 0;
 }
+
 .technology {
   margin-left: 6px;
 }
@@ -28,12 +26,6 @@ letter-spacing: 1px; */
 .marginLeft {
   margin-left: 1.5rem;
 }
-/* .button {
-    background-color: blue;
-    color: #fff;
-    padding:10px 20px;
-    border-radius: 5px;
-} */
 
 .backButton {
   text-decoration: underline;
@@ -48,16 +40,14 @@ letter-spacing: 1px; */
 .projectDescription {
   font-size: 1.2rem;
 }
+
 .projectBody {
-  max-width: 1000px;
-  padding: 0 40px;
+  max-width: 1045px;
+  padding: 0 25px;
   margin: 100px auto;
   display: flex;
   flex-direction: column;
   gap: 0 50px;
-}
-
-.projectBodyText {
 }
 
 .bodyProjectTitle {
@@ -81,7 +71,6 @@ letter-spacing: 1px; */
   color: #fff;
   cursor: pointer;
   font-weight: 600;
-  /* letter-spacing: ; */
   padding: 0.5rem 1.5rem;
   height: 55px;
   text-align: center;
@@ -117,16 +106,22 @@ letter-spacing: 1px; */
 .technologiesStackContainer {
   display: flex;
   justify-content: space-between;
-  width: 450px;
-    margin: 10px auto 0 auto;
+  flex-direction: column;
+  margin: 10px auto 0 auto;
+}
+
+@media screen and (min-width: 600px) {
+  .technologiesStackContainer {
+    flex-direction: row;
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .technologiesContainer {
-    width: 250px;
-    padding: 20px 20px 20px 20px;
-    margin-top:0;
-    
+    width: 65%;
+    padding: 20px;
+    margin-top: 0;
   }
   .projectBody {
     flex-direction: row;
@@ -134,5 +129,11 @@ letter-spacing: 1px; */
   .technologiesStackContainer {
     flex-direction: column;
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 1008px) {
+  .projectBody {
+    padding: 0 40px;
   }
 }
