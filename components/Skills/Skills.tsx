@@ -5,8 +5,8 @@ import skillsData from '../../data/skillsData';
 const Skills = () => {
   return (
     <div id="skills" className={skillsStyles.container}>
-      <p className={skillsStyles.subtitle}>Skills</p>
-      <h2 className={skillsStyles.title}>What I can Do</h2>
+      <p className={skillsStyles.sectionTitle}>Skills</p>
+      <h2 className={skillsStyles.sectionDescription}>What I can Do</h2>
       <SkillsList skills={skillsData} />
     </div>
   );

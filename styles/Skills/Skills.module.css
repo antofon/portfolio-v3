@@ -12,9 +12,17 @@
   /* max-width: 1600px; */
 }
 
-.subtitle {
+.sectionTitle {
   text-transform: uppercase;
   color: #38b6ff;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.sectionDescription {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
 }
 
 @media screen and (min-width: 768px) {
