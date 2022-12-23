@@ -33,7 +33,7 @@ const projectsData: Projects[] = [
   {
     projectsImage:
       '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
-    projectsTitle: 'Twitch Streamers',
+    projectsTitle: 'Twitch Viewer',
     projectsStack: 'HTML / CSS / JavaScript / Twitch API',
     projectsUrl: '/twitch',
   },
