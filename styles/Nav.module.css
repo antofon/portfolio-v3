@@ -1,28 +1,22 @@
-.navbar {
-  /* background-color: #F7F7F7; */
+.navbar,
+.shadow {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: all 0.1s;
   padding: 0 20px;
   position: fixed;
   width: 100%;
-  transition: all .1s;
   z-index: 3;
 }
 
-
 .shadow {
-  background-color: #F7F7F7;
   box-shadow: 0 2px 6px rgb(0 0 0 / 15%);
-  transition: all .1s;
-  /* box-shadow: 0 2px 6px #c8c7c7; */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  position: fixed;
-  width: 100%;
-  z-index: 3;
+}
+
+.logo {
+  position: relative;
+  right: 20px;
 }
 
 .links {
@@ -33,4 +27,38 @@
 
 .link {
   margin: 5px 15px;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-2%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes shrink {
+  0% {
+    width: 95%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .logo {
+    right: 10px;
+  }
 }
