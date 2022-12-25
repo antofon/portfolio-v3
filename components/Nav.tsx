@@ -12,6 +12,7 @@ const Navbar = () => {
   const [navBg, setNavBg] = useState('#F7F7F7');
   const [linkColor, setLinkColor] = useState('#000000');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [mobileCloseColor, setMobileCloseColor] = useState('#000000');
   const [isMobileMenuClosed, setIsMobileMenuClosed] = useState(true);
   const { width, height } = useWindowDimensions();
   const router = useRouter();
@@ -25,9 +26,11 @@ const Navbar = () => {
     ) {
       setNavBg('transparent');
       setLinkColor('#FFFFFF');
+      setMobileCloseColor('#FFFFFF');
     } else {
-      setNavBg('#F7F7F7');
+      setNavBg('#FFFFFF');
       setLinkColor('#000000');
+      setMobileCloseColor('#000000');
     }
   }, [router]);
 
@@ -72,7 +75,7 @@ const Navbar = () => {
       <div className={navStyles.mobileMenuIcon}>
         {typeof width !== 'undefined' && width < 768 ? (
           isMobileMenuOpen ? null : (
-            <HiOutlineBars3 size={40} onClick={openMobileMenu} />
+            <HiOutlineBars3 size={40} onClick={openMobileMenu} style={{color: `${mobileCloseColor}`, cursor:"pointer"}} />
           )
         ) : isMobileMenuOpen ? null : (
           <ul className={navStyles.links} style={{ color: `${linkColor}` }}>
@@ -96,7 +99,9 @@ const Navbar = () => {
         {isMobileMenuClosed ? null : (
           <MobileNav
             closeMobileMenu={closeMobileMenu}
-            isMobileMenuClosed={isMobileMenuClosed}
+            isMobileMenuClosed={isMobileMenuClosed} setIsMobileMenuOpen={setIsMobileMenuOpen}
+            isMobileMenuOpen={isMobileMenuOpen}
+            setIsMobileMenuClosed ={setIsMobileMenuClosed}
           />
         )}
       </div>
