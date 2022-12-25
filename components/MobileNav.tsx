@@ -72,11 +72,11 @@ const MobileNav = ({
                     <li>Skills</li>
                   </Link>
                   <Link
-                    href="/#projects"
+                    href="/#experience"
                     className={mobileNavStyles.link}
                     onClick={menuLinkClicked}
                   >
-                    <li>Projects</li>
+                    <li>Experience</li>
                   </Link>
                   <Link
                     href="/#contact"

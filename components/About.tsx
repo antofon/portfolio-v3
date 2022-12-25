@@ -16,7 +16,7 @@ const About = () => {
       <p className={aboutStyles.bodyText}>neque commodo. Mauris placerat interdum velit, nec placerat libero rutrum
       ornare. Praesent vitae lobortis eros. Suspendisse sed mauris quis risus
       pretium eleifend. </p>
-      <a href="#projects" className={aboutStyles.projectsLink}>Check out some of my latest projects</a>
+      <a href="#experience" className={aboutStyles.projectsLink}>Check out my experience</a>
         </div>
         <div className={aboutStyles.imageCol}>
           <Image src={aboutImg} alt="about image" height={500} width={500} className={aboutStyles.img} />

@@ -19,10 +19,10 @@ const Navbar = () => {
 
   useEffect(() => {
     if (
-      router.asPath === '/portfolio' ||
-      router.asPath === '/stemreads' ||
-      router.asPath === '/wikipedia' ||
-      router.asPath === '/twitch'
+      router.asPath === '/experience/personal/portfolio' ||
+      router.asPath === '/experience/personal/stemreads' ||
+      router.asPath === '/experience/personal/wikipedia' ||
+      router.asPath === '/experience/personal/twitch'
     ) {
       setNavBg('transparent');
       setLinkColor('#FFFFFF');
@@ -88,8 +88,8 @@ const Navbar = () => {
             <Link href="/#skills">
               <li className={navStyles.link}>Skills</li>
             </Link>
-            <Link href="/#projects">
-              <li className={navStyles.link}>Projects</li>
+            <Link href="/#experience">
+              <li className={navStyles.link}>Experience</li>
             </Link>
             <Link href="/#contact">
               <li className={navStyles.link}>Contact</li>

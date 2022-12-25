@@ -2,7 +2,7 @@ import Layout from '../components/Layout';
 import Header from '../components/Header';
 import About from '../components/About';
 import Skills from '../components/Skills/Skills';
-import Projects from '../components/Projects/Projects';
+import Experience from '../components/Experience/Experience';
 import Contact from '../components/Contact';
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
         <Header />
         <About />
         <Skills />
-        <Projects />
+        <Experience />
         <Contact />
       </Layout>
     </div>
