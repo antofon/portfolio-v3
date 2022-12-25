@@ -15,11 +15,7 @@ const ProjectPageBody = ({ projects, projectId }: ProjectPageProps) => {
         <p className={projectPageBodyStyles.projectDescription}>
           {project.projectDescription}
         </p>
-        {router.asPath === '/portfolio' ? null : (
-          <Link href="/#projects" className={projectPageBodyStyles.backButton}>
-            Back
-          </Link>
-        )}
+
         <div className={projectPageBodyStyles.buttonContainer}>
           <a
             href={project.projectDemoUrl}
@@ -38,6 +34,15 @@ const ProjectPageBody = ({ projects, projectId }: ProjectPageProps) => {
             Code
           </a>
         </div>
+
+        {router.asPath === '/experience' ? null : (
+          <Link
+            href="/#experience"
+            className={projectPageBodyStyles.backButton}
+          >
+            Back
+          </Link>
+        )}
       </div>
       <div className={projectPageBodyStyles.technologiesContainer}>
         <p className={projectPageBodyStyles.technologiesTitle}>Technologies</p>
