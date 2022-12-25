@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react';
 import styles from '../styles/Layout.module.css';
 import Meta from '../components/Meta';
-import Footer from '../components/Footer';
 
 interface Props {
   children?: ReactNode;
@@ -15,7 +14,6 @@ const Layout = ({ children }: Props) => {
       <div className={styles.container}>
         <main className={styles.main}>{children}</main>
       </div>
-      <Footer />
     </>
   );
 };
