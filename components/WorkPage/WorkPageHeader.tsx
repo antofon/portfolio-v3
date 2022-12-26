@@ -1,27 +1,28 @@
 import React from 'react';
 import Image from 'next/image';
 import { WorkPageProps } from '../../data/workPageData';
-import projectPageHeaderStyles from '../../styles/ProjectPage/ProjectPageHeader.module.css';
+import workPageHeaderStyles from '../../styles/WorkPage/WorkPageHeader.module.css';
 import workImg from '../../public/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg';
 
-const ProjectPageHeader = ({ work, workId }: WorkPageProps) => {
+const WorkPageHeader = ({ work, workId }: WorkPageProps) => {
   const workItem = work[workId];
   return (
-    <div className={projectPageHeaderStyles.container}>
-      <div className={projectPageHeaderStyles.bgContainer}>
-        <div className={projectPageHeaderStyles.bgOverlay}></div>
+    <div className={workPageHeaderStyles.container}>
+      <div className={workPageHeaderStyles.bgContainer}>
+        <div className={workPageHeaderStyles.bgOverlay}></div>
         <Image
           src={workImg}
           alt="alt text"
           fill
           style={{ objectFit: 'cover' }}
         />
-        <div className={projectPageHeaderStyles.headerText}>
-          <h2>{workItem.workPageTitle}</h2>
+        <div className={workId === 1 ? `${workPageHeaderStyles.headerMetaText}` : `${workPageHeaderStyles.headerText}`}>
+          <h2 className={workPageHeaderStyles.titleText}>{workItem.workPageTitle}</h2>
+          <p className={workPageHeaderStyles.positionText}style={{color: "white"}}>{workItem.workPagePosition}</p>
         </div>
       </div>
     </div>
   );
 };
 
-export default ProjectPageHeader;
+export default WorkPageHeader;

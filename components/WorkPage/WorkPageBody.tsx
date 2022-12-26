@@ -1,29 +1,45 @@
-import projectPageBodyStyles from '../../styles/ProjectPage/ProjectPageBody.module.css';
+import workPageBodyStyles from '../../styles/WorkPage/WorkPageBody.module.css';
 import { WorkPageProps } from '../../data/workPageData';
 import { FaDotCircle } from 'react-icons/fa';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import ImageCarousel from '../ImageCarousel';
 
 const WorkPageBody = ({ work, workId }: WorkPageProps) => {
   const workItem = work[workId];
   const router = useRouter();
   return (
-    <div className={projectPageBodyStyles.projectBody}>
-      <div className={projectPageBodyStyles.projectBodyText}>
-        <p className={projectPageBodyStyles.bodyProjectTitle}>Project</p>
-        <h2 className={projectPageBodyStyles.bodyOverviewTitle}>Overview</h2>
-        <p className={projectPageBodyStyles.projectDescription}>
+    <div className={workPageBodyStyles.projectBody}>
+      <div className={workPageBodyStyles.projectBodyText}>
+        {/* <p className={workPageBodyStyles.bodyProjectTitle}>Project</p> */}
+        {/* <h2 className={workPageBodyStyles.bodyOverviewTitle}>Overview</h2> */}
+        <h2 className={workPageBodyStyles.bodyOverviewTitle}>Gallery</h2>
+        {/* <p className={workPageBodyStyles.projectDescription}>
           {workItem.workPageDescription}
-        </p>
-        {router.asPath === '/experience' ? null : (
-          <Link href="/#experience" className={projectPageBodyStyles.backButton}>
+        </p> */}
+        <div className={workPageBodyStyles.carousel}>
+          <ImageCarousel work={work} workId={workId} />
+        </div>
+
+        <div className={workPageBodyStyles.buttonContainer}>
+          <a
+            href={workItem.url}
+            className={workPageBodyStyles.button}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Website
+          </a>
+        </div>
+        {/* {router.asPath === '/experience' ? null : (
+          <Link href="/#experience" className={workPageBodyStyles.backButton}>
             Back
           </Link>
-        )}
-        {/* <div className={projectPageBodyStyles.buttonContainer}>
+        )} */}
+        {/* <div className={workPageBodyStyles.buttonContainer}>
           <a
             href={project.projectDemoUrl}
-            className={projectPageBodyStyles.button}
+            className={workPageBodyStyles.button}
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -31,7 +47,7 @@ const WorkPageBody = ({ work, workId }: WorkPageProps) => {
           </a>
           <a
             href={project.projectCodeUrl}
-            className={`${projectPageBodyStyles.button} ${projectPageBodyStyles.marginLeft}`}
+            className={`${workPageBodyStyles.button} ${workPageBodyStyles.marginLeft}`}
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -39,17 +55,6 @@ const WorkPageBody = ({ work, workId }: WorkPageProps) => {
           </a>
         </div> */}
       </div>
-      {/* <div className={projectPageBodyStyles.technologiesContainer}>
-        <p className={projectPageBodyStyles.technologiesTitle}>Technologies</p>
-        <div className={projectPageBodyStyles.technologiesStackContainer}>
-          {workItem.projectPageStack.map((item, index) => (
-            <p key={index}>
-              <FaDotCircle className={projectPageBodyStyles.dotCircle} />
-              <span className={projectPageBodyStyles.technology}>{item}</span>
-            </p>
-          ))}
-        </div>
-      </div> */}
     </div>
   );
 };

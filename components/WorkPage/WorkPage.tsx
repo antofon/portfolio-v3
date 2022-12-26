@@ -1,9 +1,8 @@
-import React from 'react';
 import { WorkPageProps } from '../../data/workPageData';
 import WorkPageHeader from './WorkPageHeader';
-import WorkPageBody from './WorkPageBody'
+import WorkPageBody from './WorkPageBody';
 
-const ProjectPage = ({ work, workId }: WorkPageProps) => {
+const WorkPage = ({ work, workId }: WorkPageProps) => {
   return (
     <>
       <WorkPageHeader work={work} workId={workId} />
@@ -12,4 +11,4 @@ const ProjectPage = ({ work, workId }: WorkPageProps) => {
   );
 };
 
-export default ProjectPage;
+export default WorkPage;
