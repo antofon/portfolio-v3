@@ -20,6 +20,10 @@
   font-size: 22px;
 }
 
+.active {
+  border-bottom: 3px solid #38b6ff
+}
+
 .sectionDescription {
   font-size: 32px;
   font-weight: bold;

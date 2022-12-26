@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { useState } from 'react';
 import experienceStyles from '../../styles/Experience.module.css';
 import projectData from '../../data/projectsData';
 import ProjectsList from './Projects/ProjectsList';
@@ -7,23 +6,23 @@ import workData from '../../data/workData';
 import WorkList from './Work/WorkList';
 
 const Experience = () => {
-  const [toggleExperience, setToggleExperience] = useState(true);
-  const [isActive, setIsActive] = useState(true);
-  const [activeClass, setActiveClass] = useState('3px solid #38b6ff');
+  const [activeExperience, setActiveExperience] = useState(true);
 
-  useEffect(() => {}, []);
-  const handleToggleExperience = (e: any) => {
-    // e.preventDefault();
-    console.log(e);
-    console.log('toggle link');
-    if (toggleExperience) {
-      //show work experience
-      setToggleExperience(!toggleExperience);
-      setIsActive(true);
+  const handleActiveExperience = (e: any) => {
+    e.preventDefault();
+
+    const et = e.target;
+
+    const active = document.querySelector(`.${experienceStyles.active}`);
+    // since 'Work' is active by default, check for "Personal text" to meet conditions to toggle necessary state and classes
+    if (active && et.text === 'Personal') {
+      active.classList.remove(`${experienceStyles.active}`);
+      setActiveExperience(false);
+      et.classList.add(`${experienceStyles.active}`);
     } else {
-      //show personal experience
-      setToggleExperience(!toggleExperience);
-      setIsActive(false);
+      active?.classList.remove(`${experienceStyles.active}`);
+      et.classList.add(`${experienceStyles.active}`);
+      setActiveExperience(true);
     }
   };
 
@@ -32,37 +31,19 @@ const Experience = () => {
       <h2 className={experienceStyles.sectionTitle}>EXPERIENCE</h2>
       <p className={experienceStyles.sectionDescription}>What {"I've"} Built</p>
       <div className={experienceStyles.links}>
-        <Link
-          onClick={handleToggleExperience}
-          className={experienceStyles.link}
-          style={
-            isActive
-              ? { borderBottom: `${activeClass}` }
-              : { borderBottom: 'none' }
-          }
-          href="/experience#work"
-          scroll={false}
+        <a
+          onClick={handleActiveExperience}
+          className={`${experienceStyles.link} ${experienceStyles.active}`}
         >
           Work
-        </Link>
-        <Link
-          onClick={handleToggleExperience}
-          className={experienceStyles.link}
-          style={
-            isActive
-              ? { borderBottom: 'none' }
-              : { borderBottom: `${activeClass}` }
-          }
-          href="/experience#personal"
-          scroll={false}
-        >
-          {/* href={{pathname: "/experience/work",query: {slug:"work"}}}> */}
+        </a>
+        <a onClick={handleActiveExperience} className={experienceStyles.link}>
           Personal
-        </Link>
+        </a>
       </div>
 
       <div className={experienceStyles.grid}>
-        {toggleExperience ? (
+        {activeExperience ? (
           <WorkList work={workData} />
         ) : (
           <ProjectsList projects={projectData} />
