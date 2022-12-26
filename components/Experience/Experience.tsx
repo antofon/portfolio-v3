@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Link from "next/link"
+import Link from 'next/link';
 import experienceStyles from '../../styles/Experience.module.css';
 import projectData from '../../data/projectsData';
 import ProjectsList from './Projects/ProjectsList';
@@ -12,10 +12,10 @@ const Experience = () => {
   const [activeClass, setActiveClass] = useState('3px solid #38b6ff');
 
   useEffect(() => {}, []);
-  const handleToggleExperience = (e:any) => {
-    e.preventDefault();
-
-    console.log("toggle link")
+  const handleToggleExperience = (e: any) => {
+    // e.preventDefault();
+    console.log(e);
+    console.log('toggle link');
     if (toggleExperience) {
       //show work experience
       setToggleExperience(!toggleExperience);
@@ -40,7 +40,9 @@ const Experience = () => {
               ? { borderBottom: `${activeClass}` }
               : { borderBottom: 'none' }
           }
-        href="/experience/work">
+          href="/experience#work"
+          scroll={false}
+        >
           Work
         </Link>
         <Link
@@ -51,7 +53,10 @@ const Experience = () => {
               ? { borderBottom: 'none' }
               : { borderBottom: `${activeClass}` }
           }
-        href="/experience/personal">
+          href="/experience#personal"
+          scroll={false}
+        >
+          {/* href={{pathname: "/experience/work",query: {slug:"work"}}}> */}
           Personal
         </Link>
       </div>
