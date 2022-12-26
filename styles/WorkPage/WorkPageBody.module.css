@@ -43,7 +43,7 @@
     text-align: center;
     display: inline-block;
     position: relative;
-    bottom: 20px;
+    top: 35px;
 }
 
 .projectDescription {
@@ -151,6 +151,6 @@
   }
 
   .buttonContainer {
-    bottom: 10px;
+    top: 30px;
   }
 }
