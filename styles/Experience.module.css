@@ -37,13 +37,9 @@
 
 .link {
   cursor: pointer;
-  transition: all 0.3s;
   font-size: 1.2rem;
+  padding-bottom: 3px;
 }
-/* 
-.link:active {
-  border-bottom: 2px solid #38b6ff
-} */
 
 @media screen and (min-width: 768px) {
   .grid {
