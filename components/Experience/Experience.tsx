@@ -17,8 +17,8 @@ const Experience = () => {
     // since 'Work' is active by default, check for "Personal text" to meet conditions to toggle necessary state and classes
     if (active && et.text === 'Personal') {
       active.classList.remove(`${experienceStyles.active}`);
-      setActiveExperience(false);
       et.classList.add(`${experienceStyles.active}`);
+      setActiveExperience(false);
     } else {
       active?.classList.remove(`${experienceStyles.active}`);
       et.classList.add(`${experienceStyles.active}`);
@@ -29,7 +29,15 @@ const Experience = () => {
   return (
     <div id="experience" className={experienceStyles.container}>
       <h2 className={experienceStyles.sectionTitle}>EXPERIENCE</h2>
-      <p className={experienceStyles.sectionDescription}>What {"I've"} Built</p>
+      {activeExperience ? (
+        <p className={experienceStyles.sectionDescription}>
+          Where {"I've"} Worked
+        </p>
+      ) : (
+        <p className={experienceStyles.sectionDescription}>
+          What {"I've"} Built
+        </p>
+      )}
       <div className={experienceStyles.links}>
         <a
           onClick={handleActiveExperience}
