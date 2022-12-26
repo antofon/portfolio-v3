@@ -18,7 +18,7 @@ const ImageCarousel = ({ work, workId }: WorkPageProps) => {
     width < height;
   return (
     <>
-      <Carousel>
+      <Carousel showThumbs={false}>
         {workItem.workPageGallery.map((item, index) => {
           return (
             <div key={index}>
