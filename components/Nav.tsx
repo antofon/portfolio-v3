@@ -12,7 +12,7 @@ const Navbar = () => {
   const [navBg, setNavBg] = useState('#F7F7F7');
   const [linkColor, setLinkColor] = useState('#000000');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [mobileCloseColor, setMobileCloseColor] = useState('#000000');
+  const [mobileCloseColor, setMobileCloseColor] = useState('#000000');
   const [isMobileMenuClosed, setIsMobileMenuClosed] = useState(true);
   const { width, height } = useWindowDimensions();
   const router = useRouter();
@@ -22,7 +22,10 @@ const Navbar = () => {
       router.asPath === '/experience/personal/portfolio' ||
       router.asPath === '/experience/personal/stemreads' ||
       router.asPath === '/experience/personal/wikipedia' ||
-      router.asPath === '/experience/personal/twitch'
+      router.asPath === '/experience/personal/twitch' ||
+      router.asPath === '/experience/work/guru' ||
+      router.asPath === '/experience/work/meta' ||
+      router.asPath === '/experience/work/artdotcom'
     ) {
       setNavBg('transparent');
       setLinkColor('#FFFFFF');
@@ -69,13 +72,18 @@ const Navbar = () => {
             alt="logo"
             width="100"
             height="100"
+            priority={true}
           />
         </Link>
       </div>
       <div className={navStyles.mobileMenuIcon}>
         {typeof width !== 'undefined' && width < 768 ? (
           isMobileMenuOpen ? null : (
-            <HiOutlineBars3 size={40} onClick={openMobileMenu} style={{color: `${mobileCloseColor}`, cursor:"pointer"}} />
+            <HiOutlineBars3
+              size={40}
+              onClick={openMobileMenu}
+              style={{ color: `${mobileCloseColor}`, cursor: 'pointer' }}
+            />
           )
         ) : isMobileMenuOpen ? null : (
           <ul className={navStyles.links} style={{ color: `${linkColor}` }}>
@@ -99,9 +107,10 @@ const Navbar = () => {
         {isMobileMenuClosed ? null : (
           <MobileNav
             closeMobileMenu={closeMobileMenu}
-            isMobileMenuClosed={isMobileMenuClosed} setIsMobileMenuOpen={setIsMobileMenuOpen}
+            isMobileMenuClosed={isMobileMenuClosed}
+            setIsMobileMenuOpen={setIsMobileMenuOpen}
             isMobileMenuOpen={isMobileMenuOpen}
-            setIsMobileMenuClosed ={setIsMobileMenuClosed}
+            setIsMobileMenuClosed={setIsMobileMenuClosed}
           />
         )}
       </div>

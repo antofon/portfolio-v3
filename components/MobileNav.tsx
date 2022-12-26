@@ -40,6 +40,7 @@ const MobileNav = ({
                   width="100"
                   height="100"
                   className={mobileNavStyles.logo}
+                  priority={true}
                 />
                 <div className={mobileNavStyles.menuClose}>
                   <RxCross2 onClick={closeMobileMenu} size={25} />
