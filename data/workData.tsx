@@ -26,7 +26,7 @@ const workData: Work[] = [
   },
   {
     workImage:
-      '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
+      '/assets/images/experience/work/art/project_thumbnail_art.png',
     workName: 'Art.com',
     workTitle: 'Jr. Front-End Web Developer',
     workUrl: '/experience/work/artdotcom',

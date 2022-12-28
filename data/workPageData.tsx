@@ -89,18 +89,15 @@ const workPageData: workPage[] = [
     // projectCodeUrl: 'https://github.com/antofon/wikipediaviewer',
     workPageGallery: [
       {
-        image:
-          '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
+        image: '/assets/images/experience/work/art/art_1.png',
         caption: 'Homepage',
       },
       {
-        image:
-          '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
+        image: '/assets/images/experience/work/art/art_2.png',
         caption: 'second image',
       },
       {
-        image:
-          '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
+        image: '/assets/images/experience/work/art/art_3.png',
         caption: 'third image',
       },
     ],
