@@ -24,9 +24,9 @@
 
 .container {
   text-align: center;
-  max-width: 1000px;
-  height: 700px;
-  margin: auto;
+  max-width: 900px;
+  /* height: 700px; */
+  margin: 80px auto 0 auto;
 }
 
 .name {
@@ -38,7 +38,8 @@
   display: flex;
   justify-content: space-around;
   max-width: 300px;
-  margin: auto;
+  /* margin: auto; */
+  margin: 30px auto 0 auto;
 }
 
 .icon {
@@ -63,10 +64,12 @@
 @media screen and (min-width: 768px) {
   .socials {
     justify-content: space-between;
+    margin: 50px auto 0 auto;
   }
+
   
   .sectionTitle {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   .sectionDescription {
@@ -76,6 +79,6 @@
 
 @media screen and (min-width: 1008px) {
   .sectionTitle {
-    font-size: 4rem;
+    font-size: 3.3rem;
   }
 }
