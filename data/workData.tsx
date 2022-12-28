@@ -12,21 +12,21 @@ export interface Work {
 const workData: Work[] = [
   {
     workImage:
-      '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
+      '/assets/images/experience/work/guru/experience_thumbnail_guru.png',
     workName: 'Guru Technologies Inc.',
     workTitle: 'Web Engineer II',
     workUrl: '/experience/work/guru',
   },
   {
     workImage:
-      '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
-    workName: 'Crystal Equation Corporation at Facebook (now Meta)',
+      '/assets/images/experience/work/meta/experience_thumbnail_meta.png',
+    workName: 'Facebook (now Meta)',
     workTitle: 'CMS Specialist',
     workUrl: '/experience/work/meta',
   },
   {
     workImage:
-      '/assets/images/experience/work/art/project_thumbnail_art.png',
+      '/assets/images/experience/work/art/experience_thumbnail_art.png',
     workName: 'Art.com',
     workTitle: 'Jr. Front-End Web Developer',
     workUrl: '/experience/work/artdotcom',
