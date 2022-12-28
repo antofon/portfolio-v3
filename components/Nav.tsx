@@ -66,7 +66,7 @@ const Navbar = () => {
       style={{ backgroundColor: `${navBg}` }}
     >
       <div className={navStyles.logo}>
-        <Link href="/">
+        {/* <Link href="/">
           <Image
             src="/assets/images/logo-v2.png"
             alt="logo"
@@ -74,6 +74,10 @@ const Navbar = () => {
             height="100"
             priority={true}
           />
+        </Link> */}
+        {/* <p className={navStyles.name}>Anwana Ntofon</p> */}
+        <Link href="/" className={navStyles.name}>
+          Anwana Ntofon
         </Link>
       </div>
       <div className={navStyles.mobileMenuIcon}>

@@ -8,6 +8,7 @@
   position: fixed;
   width: 100%;
   z-index: 3;
+  margin-top: 10px;
 }
 
 .shadow {
@@ -15,8 +16,8 @@
 }
 
 .logo {
-  position: relative;
-  right: 20px;
+  /* position: relative; */
+  /* right: 20px; */
 }
 
 .links {
@@ -27,6 +28,13 @@
 
 .link {
   margin: 5px 15px;
+}
+
+.name {
+  color: #38b6ff;
+  /* font-weight: 40; */
+  font-size: 1.4rem;
+  letter-spacing: 1px;
 }
 
 @keyframes appear {
@@ -56,9 +64,31 @@
   }
 }
 
-
 @media screen and (min-width: 768px) {
-  .logo {
-    right: 10px;
+  .name {
+    color: #38b6ff;
+    /* font-weight: 40; */
+    font-size: 1.5rem;
+    letter-spacing: 1px;
   }
+  /* .logo {
+    right: 10px;
+  } */
+  /* .logo {
+    right: 0px;
+  } */
+}
+@media screen and (min-width: 1008px) {
+  .name {
+    color: #38b6ff;
+    /* font-weight: 40; */
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  /* .logo {
+    right: 10px;
+  } */
+  /* .logo {
+    right: 0px;
+  } */
 }
