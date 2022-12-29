@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import projectItemStyles from '../../../styles/Projects/ProjectItem.module.css';
+import experienceItemStyles from '../../../styles/Experience/ExperienceItem.module.css';
 import { Work } from '../../../data/workData';
 
-const Project = ({
+const WorkItem = ({
   workImage,
   workName,
   workTitle,
@@ -11,19 +11,19 @@ const Project = ({
 }: Work) => {
   return (
     <div>
-      <div className={projectItemStyles.card}>
-        <div className={projectItemStyles.imageCol}>
+      <div className={experienceItemStyles.card}>
+        <div className={experienceItemStyles.imageCol}>
           <Image
             src={workImage}
             alt={workName}
             width={500}
             height={500}
-            className={projectItemStyles.img}
+            className={experienceItemStyles.img}
           ></Image>
-          <div className={projectItemStyles.middle}>
-            <p className={projectItemStyles.title}>{workName}</p>
-            <p className={projectItemStyles.stack}>{workTitle}</p>
-            <Link href={workUrl} className={projectItemStyles.link}>
+          <div className={experienceItemStyles.middle}>
+            <p className={experienceItemStyles.title}>{workName}</p>
+            <p className={experienceItemStyles.stack}>{workTitle}</p>
+            <Link href={workUrl} className={experienceItemStyles.link}>
               More Info
             </Link>
           </div>
@@ -33,4 +33,4 @@ const Project = ({
   );
 };
 
-export default Project;
+export default WorkItem;

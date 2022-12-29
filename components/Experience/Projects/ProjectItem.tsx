@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import projectItemStyles from '../../../styles/Projects/ProjectItem.module.css';
+import experienceItemStyles from '../../../styles/Experience/ExperienceItem.module.css';
 import { Projects } from '../../../data/projectsData';
 
 const Project = ({
@@ -11,19 +11,19 @@ const Project = ({
 }: Projects) => {
   return (
     <div>
-      <div className={projectItemStyles.card}>
-        <div className={projectItemStyles.imageCol}>
+      <div className={experienceItemStyles.card}>
+        <div className={experienceItemStyles.imageCol}>
           <Image
             src={projectsImage}
             alt={projectsTitle}
             width={500}
             height={500}
-            className={projectItemStyles.img}
+            className={experienceItemStyles.img}
           ></Image>
-          <div className={projectItemStyles.middle}>
-            <p className={projectItemStyles.title}>{projectsTitle}</p>
-            <p className={projectItemStyles.stack}>{projectsStack}</p>
-            <Link href={projectsUrl} className={projectItemStyles.link}>
+          <div className={experienceItemStyles.middle}>
+            <p className={experienceItemStyles.title}>{projectsTitle}</p>
+            <p className={experienceItemStyles.stack}>{projectsStack}</p>
+            <Link href={projectsUrl} className={experienceItemStyles.link}>
               More Info
             </Link>
           </div>

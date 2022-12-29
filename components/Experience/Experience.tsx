@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import experienceStyles from '../../styles/Experience.module.css';
+import experienceStyles from '../../styles/Experience/Experience.module.css';
 import projectData from '../../data/projectsData';
 import ProjectsList from './Projects/ProjectsList';
 import workData from '../../data/workData';

@@ -1,10 +1,10 @@
 import WorkItem from './WorkItem';
-import projectsListStyles from '../../../styles/Projects/ProjectsList.module.css';
+import experienceListStyles from '../../../styles/Experience/ExperienceList.module.css';
 import { WorkProps } from '../../../data/workData';
 
-const ProjectsList = ({ work }: WorkProps) => {
+const WorkList = ({ work }: WorkProps) => {
   return (
-    <div className={projectsListStyles.container}>
+    <div className={experienceListStyles.container}>
       {work.map((workItem, index) => (
         <WorkItem
           workImage={workItem.workImage}
@@ -18,4 +18,4 @@ const ProjectsList = ({ work }: WorkProps) => {
   );
 };
 
-export default ProjectsList;
+export default WorkList;

@@ -1,10 +1,10 @@
 import ProjectItem from './ProjectItem';
-import projectsListStyles from '../../../styles/Projects/ProjectsList.module.css';
+import experienceListStyles from '../../../styles/Experience/ExperienceList.module.css';
 import { ProjectsProps } from '../../../data/projectsData';
 
 const ProjectsList = ({ projects }: ProjectsProps) => {
   return (
-    <div className={projectsListStyles.container}>
+    <div className={experienceListStyles.container}>
       {projects.map((project, index) => (
         <ProjectItem
           projectsImage={project.projectsImage}
