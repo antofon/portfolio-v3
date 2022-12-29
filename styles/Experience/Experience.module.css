@@ -1,0 +1,71 @@
+.grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto 0 auto;
+}
+
+.container {
+  height: auto;
+  padding: 500px 0 0 0;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  text-transform: uppercase;
+  color: #38b6ff;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.active {
+  border-bottom: 3px solid #38b6ff
+}
+
+.sectionDescription {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.links {
+  text-transform: uppercase;
+  justify-content: space-around;
+  display: flex;
+  margin-top: 60px;
+  width: 250px;
+  margin: 60px auto;
+}
+
+.link {
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding-bottom: 3px;
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .container {
+    /* padding: 800px 0 0 0; */
+  }
+}
+
+@media screen and (min-width: 1008px) {
+  .container {
+    padding: 350px 0 0 0;
+    /* height: 1500px; */
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    /* padding: 250px 0 0 0; */
+  }
+}
