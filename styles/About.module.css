@@ -79,11 +79,11 @@
 @media screen and (min-width: 600px) {
   .imageAboveCopy {
   }
-  
+
   .imageCol {
     display: flex;
   }
-  
+
   .imageAboveCopy {
     /* margin: 20px auto; */
     display: none;
@@ -97,7 +97,7 @@
   }
 
   .projectsLink {
-    font-size:1.2rem;
+    font-size: 1.2rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -123,6 +123,9 @@
 }
 
 @media screen and (min-width: 1008px) {
+  .container {
+    padding: 425px 0 0 0;
+  }
   .img {
     /* width: 500px; */
   }
