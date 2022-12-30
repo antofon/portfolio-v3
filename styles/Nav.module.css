@@ -4,11 +4,10 @@
   align-items: center;
   justify-content: space-between;
   transition: all 0.1s;
-  padding: 0 20px;
+  padding: 15px;
   position: fixed;
   width: 100%;
   z-index: 3;
-  margin-top: 10px;
 }
 
 .shadow {
@@ -77,6 +76,10 @@
   /* .logo {
     right: 0px;
   } */
+
+  .navbar,.shadow {
+    padding: 15px 20px;
+  }
 }
 @media screen and (min-width: 1008px) {
   .name {
