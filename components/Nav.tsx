@@ -9,7 +9,7 @@ import navStyles from '../styles/Nav.module.css';
 
 const Navbar = () => {
   const [shadow, setShadow] = useState(false);
-  const [navBg, setNavBg] = useState('#F7F7F7');
+  const [navBg, setNavBg] = useState('#FFFFFF');
   const [linkColor, setLinkColor] = useState('#000000');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileCloseColor, setMobileCloseColor] = useState('#000000');
@@ -40,7 +40,20 @@ const Navbar = () => {
   useEffect(() => {
     const handleShadow = () => {
       if (window.scrollY >= 90) {
-        setShadow(true);
+        //don't show shadow on experience pages since no bg nav
+        if (
+          router.asPath === '/experience/personal/portfolio' ||
+          router.asPath === '/experience/personal/stemreads' ||
+          router.asPath === '/experience/personal/wikipedia' ||
+          router.asPath === '/experience/personal/twitch' ||
+          router.asPath === '/experience/work/guru' ||
+          router.asPath === '/experience/work/meta' ||
+          router.asPath === '/experience/work/artdotcom'
+        ) {
+          setShadow(false);
+        } else {
+          setShadow(true);
+        }
       } else {
         setShadow(false);
       }
@@ -48,7 +61,7 @@ const Navbar = () => {
 
     window.addEventListener('scroll', handleShadow);
     return (): void => window.removeEventListener('scroll', handleShadow);
-  }, []);
+  }, [router]);
 
   const openMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -75,10 +88,12 @@ const Navbar = () => {
             priority={true}
           />
         </Link> */}
-        {/* <p className={navStyles.name}>Anwana Ntofon</p> */}
-        <Link href="/" className={navStyles.name}>
+        <p className={navStyles.name} style={{ margin: '0' }}>
           Anwana Ntofon
-        </Link>
+        </p>
+        {/* <Link href="/" className={navStyles.name}>
+          Anwana Ntofon
+        </Link> */}
       </div>
       <div className={navStyles.mobileMenuIcon}>
         {typeof width !== 'undefined' && width < 768 ? (
