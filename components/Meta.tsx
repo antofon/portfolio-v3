@@ -20,9 +20,9 @@ const Meta = ({ title, keywords, description }: MetaInfo) => {
 };
 
 Meta.defaultProps = {
-  title: 'Anwana Ntofon | Web Developer',
+  title: 'Anwana Ntofon | Home',
   keywords: 'web development, programming',
-  description: 'Portfolio website',
+  description: 'Oakland-based web developer devoted to crafting accessible and purposeful web experiences.',
 };
 
 export default Meta;
