@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react';
 import styles from '../styles/Layout.module.css';
-import Meta from '../components/Meta';
 
 interface Props {
   children?: ReactNode;
@@ -9,12 +8,9 @@ interface Props {
 
 const Layout = ({ children }: Props) => {
   return (
-    <>
-      <Meta />
-      <div className={styles.container}>
-        <main className={styles.main}>{children}</main>
-      </div>
-    </>
+    <div className={styles.container}>
+      <main className={styles.main}>{children}</main>
+    </div>
   );
 };
 
