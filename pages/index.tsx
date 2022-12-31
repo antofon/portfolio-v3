@@ -1,3 +1,4 @@
+import { NextSeo } from 'next-seo';
 import Layout from '../components/Layout';
 import Header from '../components/Header';
 import About from '../components/About';
@@ -8,6 +9,7 @@ import Contact from '../components/Contact';
 export default function Home() {
   return (
     <div>
+      <NextSeo title="Home | Anwana Ntofon" />
       <Layout>
         <Header />
         <About />
