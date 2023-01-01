@@ -24,8 +24,8 @@ const Navbar = () => {
       router.asPath === '/experience/personal/wikipedia' ||
       router.asPath === '/experience/personal/twitch' ||
       router.asPath === '/experience/work/guru' ||
-      router.asPath === '/experience/work/meta' ||
-      router.asPath === '/experience/work/artdotcom'
+      router.asPath === '/experience/work/facebook' ||
+      router.asPath === '/experience/work/art'
     ) {
       setNavBg('transparent');
       setLinkColor('#FFFFFF');
@@ -47,8 +47,8 @@ const Navbar = () => {
           router.asPath === '/experience/personal/wikipedia' ||
           router.asPath === '/experience/personal/twitch' ||
           router.asPath === '/experience/work/guru' ||
-          router.asPath === '/experience/work/meta' ||
-          router.asPath === '/experience/work/artdotcom'
+          router.asPath === '/experience/work/facebook' ||
+          router.asPath === '/experience/work/art'
         ) {
           setShadow(false);
         } else {
