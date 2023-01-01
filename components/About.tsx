@@ -20,11 +20,16 @@ const About = () => {
           </div>
 
           <p className={aboutStyles.bodyText}>
-          There’s no greater joy than bringing an idea to life. Coding has empowered me to create visually sound and functional websites, limited only by the current technology of the times. Outside of that, imagination is truly boundless.  
+            There’s no greater joy than bringing an idea to life. Coding has
+            empowered me to create visually sound and functional websites,
+            limited only by the current technology of the times. Outside of
+            that, imagination is truly boundless.
           </p>
           <p></p>
           <p className={aboutStyles.bodyText}>
-          I’ve experienced immense pleasure partaking in open source projects, volunteer teaching of web developement fundamentals, and career opportunities as a Front-End Web Developer. 
+            I’ve experienced immense pleasure partaking in open source projects,
+            volunteer teaching of web developement fundamentals, and career
+            opportunities as a Front-End Web Developer.
           </p>
           <a href="#experience" className={aboutStyles.projectsLink}>
             Check out my experience
