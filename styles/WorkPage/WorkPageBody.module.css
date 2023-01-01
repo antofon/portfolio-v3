@@ -39,11 +39,11 @@
   /* margin-top: 2.5rem; */
   /* margin-bottom: 2rem; */
   margin: auto;
-    width: 100%;
-    text-align: center;
-    display: inline-block;
-    position: relative;
-    top: 35px;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  top: 35px;
 }
 
 .projectDescription {
@@ -123,6 +123,16 @@
   margin: 10px auto 0 auto;
 }
 
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px 0;
+}
+
+.workImage {
+  object-fit: contain;
+}
+
 @media screen and (min-width: 600px) {
   .technologiesStackContainer {
     flex-direction: row;
@@ -142,6 +152,12 @@
   .technologiesStackContainer {
     flex-direction: column;
     width: 100%;
+  }
+
+  .imageContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
   }
 }
 
