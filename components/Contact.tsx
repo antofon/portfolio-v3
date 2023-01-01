@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import useWindowDimensions from '../hooks/useWindowDimensions';
 import emailjs from '@emailjs/browser';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
+import Router, { useRouter } from 'next/router';
 import contactStyles from '../styles/Contact.module.css';
 import contactImg from '../public/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg';
 import { FaLinkedinIn, FaGithub, FaCodepen } from 'react-icons/fa';
 
 const Contact = () => {
-  const router = useRouter();
+  // const router = useRouter();
+
   const [toSend, setToSend] = useState({
     from_name: '',
     subject: '',
@@ -18,8 +19,8 @@ const Contact = () => {
 
   const [isFormSubmit, setIsFormSubmit] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
-  const { width, height } = useWindowDimensions();
-  console.log(width);
+  const { width } = useWindowDimensions();
+  // console.log(width);
   // if (isBrowser()) {
   //   let initialWidth = window.innerWidth
   //   setWidth(initialWidth);
@@ -65,6 +66,7 @@ const Contact = () => {
     setIsFormSubmit(!isFormSubmit);
     //set success message
     setSuccessMessage('Message sent!');
+    console.log('form submit: ', isFormSubmit);
 
     //clear form after successful submission
     setToSend({
@@ -76,14 +78,58 @@ const Contact = () => {
 
     // wait 1 second before redirecting to top of page
     const timer = setTimeout(() => {
-      router.push('/');
+      // router.push('/');
       // clear success message
       setSuccessMessage('');
       //upon clearing of form
       setIsFormSubmit(!isFormSubmit);
+      console.log('form reset: ', isFormSubmit);
       //remove message block, only text gets cleared
-      document.getElementById('successMessage')?.remove();
 
+      /**************CURRENTLY CAUSING NOT FOUND ERROR ************************/
+      // document.getElementById('successMessage')?.remove();
+
+      // const successMessageSelector = document.getElementById(
+      //   'successMessageContainer'
+      // );
+
+      // if (successMessageSelector) {
+      //   const successMessageDisplay = window.getComputedStyle(
+      //     successMessageSelector
+      //   ).display;
+
+      //   if (successMessageDisplay === 'block') {
+      //     successMessageSelector.style.display = 'none';
+      //     console.log('hide message...');
+      //   } else {
+      //     successMessageSelector.style.display = 'block';
+      //     console.log('show message...');
+      //   }
+      // }
+
+      Router.reload();
+      //   successMessageSelector &&
+      //   successMessageSelector.style.display === 'block'
+      // ) {
+      //   successMessageSelector.style.display = 'none';
+      //   console.log('hide message...');
+      // } else if (
+      //   successMessageSelector &&
+      //   successMessageSelector.style.display === 'none'
+      // ) {
+      //   console.log('show message...');
+      //   successMessageSelector.style.display = 'block';
+      // }
+      // if (successMessage && successMessage.style.display === 'none') {
+      //   console.log('showing message');
+      //   successMessage.style.display = 'block';
+      // } else if (successMessage && successMessage.style.display === 'block') {
+      //   console.log('hiding message');
+      //   successMessage.style.display = 'none';
+      // } else {
+      //   console.log("successMessage value: ", successMessage)
+      // }
+      // className={contactStyles.successMessage}
       //only runs if at desktop size, should not be adding/removing any classes until we get to 2 col layout.
       if (typeof width !== 'undefined' && width >= 1008) {
         //add back original class, bringing back original margin top
@@ -92,11 +138,27 @@ const Contact = () => {
           ?.classList?.add(`${contactStyles.socialsContainer}`);
         // remove newly added class, removing new margin top
         document
-          .querySelector(`.${contactStyles.socialsContainerFormSubmit}`)
+          .querySelector(`#removeClass`)
           ?.classList?.remove(`${contactStyles.socialsContainerFormSubmit}`);
       }
     }, 1000);
+
     console.log(`isFormSubmit: ${isFormSubmit}`);
+    document
+      .querySelector(`.${contactStyles.socialsContainerFormSubmit}`)
+      ?.classList?.add(`${contactStyles.socialsContainer}`);
+    // Create a p element:
+    // const para = document.createElement('p');
+    // para.setAttribute('id', 'successMessage');
+    // Create a text node:
+    // const node = document.createTextNode('Message Sent!');
+
+    // Append text node to the p element:
+    // para.appendChild(node);
+    // document
+    //   .querySelector(`.${contactStyles.successMessageContainer}`)
+    //   ?.appendChild(para);
+    // para.style.display = 'none';
     return () => clearTimeout(timer);
   };
 
@@ -105,7 +167,7 @@ const Contact = () => {
       <h2 className={contactStyles.sectionTitle}>CONTACT</h2>
       <p className={contactStyles.sectionDescription}>Get In Touch</p>
       <div className={contactStyles.wrapper}>
-        <div className={contactStyles.connectContainer}>
+        {/* <div className={contactStyles.connectContainer}>
           <Image
             src={contactImg}
             alt="contact image"
@@ -113,13 +175,11 @@ const Contact = () => {
             height={400}
             className={contactStyles.img}
           ></Image>
-
-          <p className={contactStyles.name}>Anwana Ntofon</p>
           <div className={contactStyles.bodyText}>
-            <p className={contactStyles.title}>Front-End Web Developer</p>
+            <p className={contactStyles.name}>Front-End Web Developer</p>
             <p className={contactStyles.description}>
               I am available for freelance or full-time positions. Contact me
-              and {"let's"} talk
+              and {"let's"} chat
             </p>
           </div>
 
@@ -129,6 +189,7 @@ const Contact = () => {
                 ? contactStyles.socialsContainerFormSubmit
                 : contactStyles.socialsContainer
             }
+            id="removeClass"
           >
             <p className={contactStyles.connectText}>Connect with me</p>
             <div className={contactStyles.socials}>
@@ -163,7 +224,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className={contactStyles.formContainer}>
           <form className={contactStyles.form} onSubmit={handleSubmit}>
@@ -223,7 +284,7 @@ const Contact = () => {
               cols={30}
               rows={10}
               maxLength={1000}
-              required
+              //required
               value={toSend.message}
               className={contactStyles.formMessage}
               onChange={handleInput}
@@ -231,11 +292,13 @@ const Contact = () => {
             <button type="submit" className={contactStyles.button}>
               Send Message
             </button>
-            {isFormSubmit ? (
-              <p id="successMessage" className={contactStyles.successMessage}>
-                {successMessage}
-              </p>
-            ) : null}
+            <div id="successMessageContainer">
+              {isFormSubmit ? (
+                <p id="successMessage" className={contactStyles.successMessage}>
+                  {successMessage}
+                </p>
+              ) : null}
+            </div>
           </form>
         </div>
       </div>
