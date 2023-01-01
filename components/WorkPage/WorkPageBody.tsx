@@ -4,6 +4,7 @@ import { FaDotCircle } from 'react-icons/fa';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import ImageCarousel from '../ImageCarousel';
+import Image from 'next/image';
 
 const WorkPageBody = ({ work, workId }: WorkPageProps) => {
   const workItem = work[workId];
@@ -15,11 +16,33 @@ const WorkPageBody = ({ work, workId }: WorkPageProps) => {
         {/* <h2 className={workPageBodyStyles.bodyOverviewTitle}>Overview</h2> */}
         <h2 className={workPageBodyStyles.bodyOverviewTitle}>Gallery</h2>
         <p className={workPageBodyStyles.projectDescription}>
-          {workItem.workPageDescription}
+          {workItem.workPageDescription} <a
+          href={workItem.url}
+          rel="nofollow noreferrer"
+          target="_blank"
+         style={{textDecoration:"underline"}}>
+          Website
+        </a>
         </p>
-        <div className={workPageBodyStyles.carousel}>
-          <ImageCarousel work={work} workId={workId} />
+        
+
+        <div className={workPageBodyStyles.imageContainer}>
+          {workItem.workPageGallery.map((item, index) => (
+            <Image
+              src={item.image}
+              key={index}
+              alt={item.caption}
+              width={300}
+              height={300}
+              className={workPageBodyStyles.workImage}
+            />
+          ))}
         </div>
+
+        {/* <div workPageBodyStyles></div> */}
+        {/* <div className={workPageBodyStyles.carousel}>
+          <ImageCarousel work={work} workId={workId} />
+        </div> */}
 
         {/* <div className={workPageBodyStyles.buttonContainer}>
           <a

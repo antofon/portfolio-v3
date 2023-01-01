@@ -23,21 +23,19 @@ export interface workPage {
 const workPageData: workPage[] = [
   {
     workPageHeaderImage:
+      // '/assets/images/experience/work/guru/experience_thumbnail_guru.png',
       '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
     workPageGallery: [
       {
-        image:
-          '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
-        caption: 'first image',
-      },
-      {
-        image:
-          '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
+        image: '/assets/images/experience/work/guru/guru-partner-request.png',
         caption: 'second image',
       },
       {
-        image:
-          '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
+        image: '/assets/images/experience/work/guru/guru_exit_intent_pop_up.png',
+        caption: 'first image',
+      },
+      {
+        image: '/assets/images/experience/work/guru/guru-demo-request.png',
         caption: 'third image',
       },
     ],
@@ -49,7 +47,7 @@ const workPageData: workPage[] = [
     workPagePosition: 'Web Engineer II',
     workId: 0,
     workPageDescription:
-      'This is the third iteration of my Portfolio. It was an exciting challenge for me to apply my Next.js and TypeScript skills to a real-world project.',
+      'As a Web Engineer II at Guru, I built several landing pages for webinar and demo requests, as well as performed site updates for our marketing site. In addition to these job functions, I fixed coding bugs in our Hubspot landing pages and email templates, to ensure a responsive website experience for customers. Languages that I used include HTML, CSS and JavaScript. There were other projects I worked on like website redesign which consisted of the Astro web framework, and React.',
   },
   {
     workPageHeaderImage:
@@ -60,25 +58,26 @@ const workPageData: workPage[] = [
     workPageGallery: [
       {
         image:
-          '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
+          '/assets/images/experience/work/facebook/facebook-holiday-marketing-guide-2020.png',
         caption: 'first image',
       },
       {
         image:
-          '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
+          '/assets/images/experience/work/facebook/facebook-holiday-marketing-guide-success-stories-2020.png',
         caption: 'second image',
       },
       {
         image:
-          '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
+          '/assets/images/experience/work/facebook/facebook-holiday-marketing-guide-success-stories-post-holiday-2020.png',
         caption: 'third image',
       },
     ],
-    url: 'https://www.facebook.com/business/',
-    workPageTitle: 'Crystal Equation Corporation at Facebook (now Meta)',
+    url: 'https://www.facebook.com/business/m/guide-to-2020-holidays/checklist',
+    // workPageTitle: 'Crystal Equation Corporation at Facebook (now Meta)',
+    workPageTitle: 'Facebook (now Meta)',
     workPagePosition: 'CMS Specialist',
     workPageDescription:
-      'This is the third iteration of my Portfolio. It was an exciting challenge for me to apply my Next.js and TypeScript skills to a real-world project.',
+      'As a CMS Specialist at Facebook (Now Meta) I worked on the Facebook Business and Instagram Business teams to create web assets for SMBs. These web assets included emails, AYMTs (Actions You May Take) and landing pages for specific campaigns. AYMTs provide helpful suggestions to help imporve the results for a user\'s Facebook business activity. One of the projects I enjoyed the most was the 2020 Holiday Marketing Guide. It was a comprehensive layout of how to best connect with customers, improve your execution strategy, and grow your audience. I utilized HTML and CSS on the job and learn how to major web content accessible across dozens of locales.',
     workId: 1,
   },
   {
@@ -105,7 +104,7 @@ const workPageData: workPage[] = [
     workPageTitle: 'Art.com',
     workPagePosition: 'Jr. Front-End Web Developer',
     workPageDescription:
-      'This is the third iteration of my Portfolio. It was an exciting challenge for me to apply my Next.js and TypeScript skills to a real-world project.',
+      'In my first two weeks at Art.com, I had an incredible opportunity to contribute to a sitewide rebranding. I learned how to operate in a fast paced environment and understood the value of testing code and web assets before going live. I was responsible for daily updates on the homepage, which consisted of our hero image and several content modifications around holiday and other campaign occassions. I enjoyed my time at Art because I learned so many valuable skills and had opportunities to work alongside marketing, design, and project management. In my final months, I had even more opportunities to work with the Data Analyst and Engineering teams to perform A/B testing of homepage content, and edit React code to modify the layout of our modules. Languages I used include: HTML, CSS, JavaScript, jQuery, and React.',
     workId: 2,
   },
 ];
