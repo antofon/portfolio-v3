@@ -19,7 +19,7 @@ const workData: Work[] = [
   },
   {
     workImage:
-      '/assets/images/experience/work/meta/experience_thumbnail_meta.png',
+      '/assets/images/experience/work/facebook/experience_thumbnail_facebook.png',
     workName: 'Facebook (now Meta)',
     workTitle: 'CMS Specialist',
     workUrl: '/experience/work/facebook',
