@@ -19,8 +19,8 @@ const Footer = () => {
       router.asPath === '/experience/personal/wikipedia' ||
       router.asPath === '/experience/personal/twitch' ||
       router.asPath === '/experience/work/guru' ||
-      router.asPath === '/experience/work/meta' ||
-      router.asPath === '/experience/work/artdotcom'
+      router.asPath === '/experience/work/facebook' ||
+      router.asPath === '/experience/work/art'
     ) {
       setHomePageFooter(false);
     } else {
@@ -31,8 +31,8 @@ const Footer = () => {
     if (
       router.asPath === '/' ||
       router.asPath === '/experience/work/guru' ||
-      router.asPath === '/experience/work/meta' ||
-      router.asPath === '/experience/work/artdotcom'
+      router.asPath === '/experience/work/facebook' ||
+      router.asPath === '/experience/work/art'
     ) {
       setIsWorkFooter(true);
     } else if (
