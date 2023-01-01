@@ -22,14 +22,14 @@ const workData: Work[] = [
       '/assets/images/experience/work/meta/experience_thumbnail_meta.png',
     workName: 'Facebook (now Meta)',
     workTitle: 'CMS Specialist',
-    workUrl: '/experience/work/meta',
+    workUrl: '/experience/work/facebook',
   },
   {
     workImage:
       '/assets/images/experience/work/art/experience_thumbnail_art.png',
     workName: 'Art.com',
     workTitle: 'Jr. Front-End Web Developer',
-    workUrl: '/experience/work/artdotcom',
+    workUrl: '/experience/work/art',
   },
 ];
 
