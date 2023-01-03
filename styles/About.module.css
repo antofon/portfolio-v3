@@ -1,3 +1,8 @@
+.container {
+  padding: 125px 0 0 0;
+  margin-top: 225px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -6,12 +11,6 @@
   width: 100%;
   margin: auto;
   gap: 30px 0;
-}
-
-.container {
-  /* padding: 250px 0 0 0; */
-  padding: 350px 0 0 0;
-  /* height: auto; */
 }
 
 .sectionTitle {
@@ -27,15 +26,26 @@
   margin: 0;
 }
 
-.bodyText {
-  font-size: 1.3rem;
+.imageAboveCopy {
+  margin: 30px 0;
+}
+
+.imageCol,
+.imageAboveCopy {
+  border-radius: 10px;
+  height: auto;
+  width: 200px;
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  background-color: #fff;
+  box-shadow: 0 0px 20px rgb(0 0 0 / 15%);
+  position: relative;
 }
 
 .img {
-  /* border-radius: 10px;
-  width: 100%;
-  height: auto; */
-  /* border-radius: 50%; */
   border-radius: 10px;
   height: auto;
   width: 180px;
@@ -43,48 +53,25 @@
   object-fit: cover;
 }
 
-.imageCol,
-.imageAboveCopy {
-  /* height: auto; */
-  /* border-radius: 50%; */
-  border-radius: 10px;
-  height: auto;
-  width: 200px;
-  height: 270px;
-  display: flex;
-  /* margin: auto; */
-  justify-content: center;
-  align-items: center;
-  object-fit: cover;
-  /* padding: 10px; */
-  /* border-radius: 10px; */
-  background-color: #fff;
-  box-shadow: 0 0px 20px rgb(0 0 0 / 15%);
-  position: relative;
-}
-
-.imageAboveCopy {
-  margin: 30px 0;
+.bodyText {
+  font-size: 1.3rem;
 }
 
 .projectsLink {
   display: inline-block;
   text-decoration: underline;
+  font-size: 1.1rem;
 }
 
 .imageCol {
   display: none;
 }
 
-  .container {
-    padding: 125px 0 0 0;
-    margin-top: 225px;
-  }
-  
-
-
 @media screen and (min-width: 600px) {
-  .imageAboveCopy {
+  .grid {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 0 80px;
+    justify-content: center;
   }
 
   .imageCol {
@@ -92,15 +79,7 @@
   }
 
   .imageAboveCopy {
-    /* margin: 20px auto; */
     display: none;
-  }
-
-  .grid {
-    grid-template-columns: 1.5fr 1fr;
-    gap: 0 80px;
-    align-items: center;
-    justify-content: center;
   }
 
   .projectsLink {
@@ -113,10 +92,6 @@
     margin-top: 250px;
   }
 
-  .img {
-    width: 260px;
-    height: 280px;
-  }
   .imageCol,
   .imageAboveCopy {
     width: 280px;
@@ -124,10 +99,10 @@
     top: 20px;
   }
 
-  /* .grid {
-    grid-template-columns: 1.5fr 1fr;
-    gap: 0 80px;
-  } */
+  .img {
+    width: 260px;
+    height: 280px;
+  }
 }
 
 @media screen and (min-width: 1008px) {
@@ -135,19 +110,10 @@
     padding: 300px 0 0 0;
     margin-top: 200px;
   }
-  .img {
-    /* width: 500px; */
-  }
 }
 
 @media screen and (min-width: 1200px) {
   .grid {
     gap: 0 120px;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .container {
-    /* height: 800px; */
   }
 }
