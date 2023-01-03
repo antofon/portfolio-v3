@@ -77,7 +77,7 @@ const workPageData: workPage[] = [
     workPageTitle: 'Facebook (now Meta)',
     workPagePosition: 'CMS Specialist',
     workPageDescription:
-      'As a CMS Specialist at Facebook (Now Meta) I worked on the Facebook Business and Instagram Business teams to create web assets for SMBs. These web assets included emails, AYMTs (Actions You May Take) and landing pages for specific campaigns. AYMTs provide helpful suggestions to help imporve the results for a user\'s Facebook business activity. One of the projects I enjoyed the most was the 2020 Holiday Marketing Guide. It was a comprehensive layout of how to best connect with customers, improve your execution strategy, and grow your audience. I utilized HTML and CSS on the job and learn how to major web content accessible across dozens of locales.',
+      'As a CMS Specialist at Facebook (Now Meta) I worked on the Facebook Business and Instagram Business teams to create web assets for SMBs. These web assets included emails, AYMTs (Actions You May Take) and landing pages for specific campaigns. AYMTs provide helpful suggestions to help improve the results for a user\'s Facebook business activity. One of the projects I enjoyed the most was the 2020 Holiday Marketing Guide. It was a comprehensive layout of how to best connect with customers, improve your execution strategy, and grow your audience. I utilized HTML and CSS on the job and learn how to major web content accessible across dozens of locales.',
     workId: 1,
   },
   {
