@@ -1,18 +1,16 @@
 import { useState } from 'react';
-import experienceStyles from '../../styles/Experience/Experience.module.css';
-import projectData from '../../data/projectsData';
+import WorkList from './Work/WorkList';
 import ProjectsList from './Projects/ProjectsList';
 import workData from '../../data/workData';
-import WorkList from './Work/WorkList';
+import projectData from '../../data/projectsData';
+import experienceStyles from '../../styles/Experience/Experience.module.css';
 
 const Experience = () => {
   const [activeExperience, setActiveExperience] = useState(true);
 
   const handleActiveExperience = (e: any) => {
     e.preventDefault();
-
     const et = e.target;
-
     const active = document.querySelector(`.${experienceStyles.active}`);
     // since 'Work' is active by default, check for "Personal text" to meet conditions to toggle necessary state and classes
     if (active && et.text === 'Personal') {
@@ -49,8 +47,7 @@ const Experience = () => {
           Personal
         </a>
       </div>
-
-      <div className={experienceStyles.grid}>
+      <div className={experienceStyles.experienceContainer}>
         {activeExperience ? (
           <WorkList work={workData} />
         ) : (
