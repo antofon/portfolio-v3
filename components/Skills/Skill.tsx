@@ -1,6 +1,6 @@
-import skillStyles from '../../styles/Skills/Skill.module.css';
 import Image from 'next/image';
 import { Skills } from '../../data/skillsData';
+import skillStyles from '../../styles/Skills/Skill.module.css';
 
 const Skill = ({ skillsIcon, skillsTitle }: Skills) => {
   return (

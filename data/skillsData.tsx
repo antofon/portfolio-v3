@@ -1,6 +1,7 @@
 export interface SkillsProps {
   skills: Skills[];
 }
+
 export interface Skills {
   skillsIcon: string;
   skillsTitle: string;
