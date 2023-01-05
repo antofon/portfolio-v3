@@ -1,6 +1,6 @@
 import WorkItem from './WorkItem';
-import experienceListStyles from '../../../styles/Experience/ExperienceList.module.css';
 import { WorkProps } from '../../../data/workData';
+import experienceListStyles from '../../../styles/Experience/ExperienceList.module.css';
 
 const WorkList = ({ work }: WorkProps) => {
   return (
