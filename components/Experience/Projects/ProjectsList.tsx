@@ -1,6 +1,6 @@
 import ProjectItem from './ProjectItem';
-import experienceListStyles from '../../../styles/Experience/ExperienceList.module.css';
 import { ProjectsProps } from '../../../data/projectsData';
+import experienceListStyles from '../../../styles/Experience/ExperienceList.module.css';
 
 const ProjectsList = ({ projects }: ProjectsProps) => {
   return (
