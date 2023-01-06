@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { FaChevronUp } from 'react-icons/fa';
 import backToTopStyles from '../styles/BackToTop.module.css';
-import { useRouter } from 'next/router';
 
 interface BackToTop {
   visible: string;
