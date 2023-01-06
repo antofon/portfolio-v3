@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import MobileNav from './MobileNav';
-import Image from 'next/image';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
+import Image from 'next/image';
 import useWindowDimensions from '../hooks/useWindowDimensions';
+import MobileNav from './MobileNav';
 import { HiOutlineBars3 } from 'react-icons/hi2';
 import navStyles from '../styles/Nav.module.css';
 
@@ -14,7 +14,7 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileCloseColor, setMobileCloseColor] = useState('#000000');
   const [isMobileMenuClosed, setIsMobileMenuClosed] = useState(true);
-  const { width, height } = useWindowDimensions();
+  const { width } = useWindowDimensions();
   const router = useRouter();
 
   useEffect(() => {
@@ -91,11 +91,8 @@ const Navbar = () => {
         <p className={navStyles.name} style={{ margin: '0' }}>
           Anwana Ntofon
         </p>
-        {/* <Link href="/" className={navStyles.name}>
-          Anwana Ntofon
-        </Link> */}
       </div>
-      <div className={navStyles.mobileMenuIcon}>
+      <>
         {typeof width !== 'undefined' && width < 768 ? (
           isMobileMenuOpen ? null : (
             <HiOutlineBars3
@@ -132,7 +129,7 @@ const Navbar = () => {
             setIsMobileMenuClosed={setIsMobileMenuClosed}
           />
         )}
-      </div>
+      </>
     </nav>
   );
 };
