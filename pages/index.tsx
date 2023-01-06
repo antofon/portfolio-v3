@@ -8,7 +8,7 @@ import Contact from '../components/Contact';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <NextSeo title="Home | Anwana Ntofon" />
       <Layout>
         <Header />
@@ -17,6 +17,6 @@ export default function Home() {
         <Experience />
         <Contact />
       </Layout>
-    </div>
+    </>
   );
 }
