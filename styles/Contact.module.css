@@ -2,7 +2,6 @@
   height: auto;
   padding: 100px 0 0 0;
   margin-top: 100px;
-  /* z-index: 4; */
 }
 
 .sectionTitle {
@@ -21,43 +20,8 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-}
-
-.formInput {
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  padding: 10px 0 10px 5px;
-  margin-top: 10px;
-  font-size: 1.1rem;
-}
-
-.formLabel {
-  text-transform: uppercase;
-  font-size: 1.1rem;
-}
-
-.labelMarginTop {
-  margin-top: 1.5rem;
-}
-
-.formMessage {
-  margin-top: 1.1rem;
-  font-size: 1.1rem;
-  font-family: Arial, Helvetica, sans-serif;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  padding: 10px 0 10px 5px;
-  resize: none;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
+  max-width: 1200px;
+  margin-top: 2rem;
 }
 
 .img {
@@ -70,16 +34,21 @@
   padding-left: 0.3rem;
   font-size: 1.1rem;
 }
-.connectContainer {
-  height: auto;
-  padding: 1.3rem 1.3rem 2.5rem 1.3rem;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0 0px 20px rgb(0 0 0 / 15%);
-  display: inline-block;
-  /* margin-top: 2rem; */
+
+.name {
+  font-size: 2rem;
+  font-weight: bold;
 }
 
+.connectText {
+  text-transform: uppercase;
+}
+
+.formContainer {
+  margin-top: 3rem;
+}
+
+.connectContainer,
 .formContainer {
   height: auto;
   padding: 1.3rem 1.3rem 2.5rem 1.3rem;
@@ -87,48 +56,6 @@
   background-color: #fff;
   box-shadow: 0 0px 20px rgb(0 0 0 / 15%);
   display: inline-block;
-  margin-top: 3rem;
-}
-.connectText {
-  text-transform: uppercase;
-}
-
-/* Gradient Button: https://codepen.io/JavaScriptJunkie/pen/pPRooV?editors=1100 */
-.button {
-  width: 100%;
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #fff;
-  cursor: pointer;
-  margin: 2.5rem 0 0 0;
-  height: 55px;
-  text-align: center;
-  border: none;
-  background-size: 300% 100%;
-  border-radius: 5px;
-  /* moz-transition: all .4s ease-in-out; */
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-
-.button:hover {
-  background-position: 100% 0;
-  /* moz-transition: all .4s ease-in-out; */
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-
-.button {
-  background-image: linear-gradient(
-    to right,
-    #25aae1,
-    #4481eb,
-    #04befe,
-    #3f86ed
-  );
-  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
 }
 
 /* Socials */
@@ -136,15 +63,6 @@
   display: flex;
   flex-direction: column;
   margin-top: 4.3rem;
-}
-
-.wrapper {
-  margin-top: 2rem;
-}
-
-.name {
-  font-size: 2rem;
-  font-weight: bold;
 }
 
 .socials {
@@ -172,6 +90,70 @@
   transform: scale(1.05);
 }
 
+/* FORM */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formLabel {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+.formInput {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 0 10px 5px;
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+.formMessage {
+  margin-top: 1.1rem;
+  font-size: 1.1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 0 10px 5px;
+  resize: none;
+}
+
+/* Gradient Button: https://codepen.io/JavaScriptJunkie/pen/pPRooV?editors=1100 */
+.button {
+  width: 100%;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  margin: 2.5rem 0 0 0;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 5px;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #4481eb,
+    #04befe,
+    #3f86ed
+  );
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+
+.button:hover {
+  background-position: 100% 0;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
 .successMessage {
   margin: 0;
   padding-top: 2.5rem;
@@ -180,73 +162,61 @@
   color: #23873f;
 }
 
+.labelMarginTop {
+  margin-top: 1.5rem;
+}
+
+/* MEDIA QUERIES */
+
 @media screen and (min-width: 768px) {
   .container {
     height: 900px;
   }
 
-  .socialsContainerFormSubmit {
-    margin-top: 4rem;
-  }
-
   .formMessage {
     font-size: 1.2rem;
+  }
+
+  .socialsContainerFormSubmit {
+    margin-top: 4rem;
   }
 }
 
 @media screen and (min-width: 1008px) {
   .container {
-    /* padding: 250px 0 0 0; */
-    /* padding: 105px 0 0 0; */
-    /* height: 800px; */
-    padding: 100px 0 0 0;
-    /* height: 1045px; */
     margin-top: 200px;
   }
 
   .wrapper {
     flex-direction: row;
-    max-width: 1200px;
     justify-content: space-between;
     gap: 0 50px;
   }
 
   .formContainer {
     margin-top: 0;
-    /* width: 75%; */
     width: 700px;
-    padding: 1.3rem 1.3rem 2.5rem 1.3rem;
-  }
-
-  .connectContainer {
-    padding: 1.3rem 1.3rem 2.5rem 1.3rem;
   }
 
   .successMessage {
     padding: 35px 0 0px 0;
     font-size: 20px;
   }
+
   .socialsContainerFormSubmit {
     display: flex;
     flex-direction: column;
-    margin-top: 6.5rem;
   }
 
+  .socialsContainerFormSubmit,
   .socialsContainer {
     margin-top: 6.5rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .socialsContainerFormSubmit {
-    margin-top: 4.5rem;
-  }
-
+  .socialsContainerFormSubmit,
   .socialsContainer {
     margin-top: 4.5rem;
   }
 }
-
-/* .successMessageContainer {
-  display:none;
-} */

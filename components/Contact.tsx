@@ -1,15 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import useWindowDimensions from '../hooks/useWindowDimensions';
-import emailjs from '@emailjs/browser';
+import React, { useState } from 'react';
+import Router from 'next/router';
 import Image from 'next/image';
-import Router, { useRouter } from 'next/router';
-import contactStyles from '../styles/Contact.module.css';
+import emailjs from '@emailjs/browser';
+import useWindowDimensions from '../hooks/useWindowDimensions';
 import contactImg from '../public/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg';
 import { FaLinkedinIn, FaGithub, FaCodepen } from 'react-icons/fa';
+import contactStyles from '../styles/Contact.module.css';
 
 const Contact = () => {
-  // const router = useRouter();
-
   const [toSend, setToSend] = useState({
     from_name: '',
     subject: '',
@@ -20,11 +18,6 @@ const Contact = () => {
   const [isFormSubmit, setIsFormSubmit] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
   const { width } = useWindowDimensions();
-  // console.log(width);
-  // if (isBrowser()) {
-  //   let initialWidth = window.innerWidth
-  //   setWidth(initialWidth);
-  // }
   const handleInput = (e: any) => {
     // var regex =
     //   /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
@@ -64,11 +57,8 @@ const Contact = () => {
       );
     // show message after successful submission
     setIsFormSubmit(!isFormSubmit);
-    //set success message
     setSuccessMessage('Message sent!');
-    console.log('form submit: ', isFormSubmit);
-
-    //clear form after successful submission
+    // clear form after successful submission
     setToSend({
       from_name: '',
       subject: '',
@@ -78,12 +68,10 @@ const Contact = () => {
 
     // wait 1 second before redirecting to top of page
     const timer = setTimeout(() => {
-      // router.push('/');
       // clear success message
       setSuccessMessage('');
       //upon clearing of form
       setIsFormSubmit(!isFormSubmit);
-      console.log('form reset: ', isFormSubmit);
       //remove message block, only text gets cleared
 
       /**************CURRENTLY CAUSING NOT FOUND ERROR ************************/
@@ -132,7 +120,7 @@ const Contact = () => {
       // className={contactStyles.successMessage}
       //only runs if at desktop size, should not be adding/removing any classes until we get to 2 col layout.
       if (typeof width !== 'undefined' && width >= 1008) {
-        //add back original class, bringing back original margin top
+        // add back original class, bringing back original margin top
         document
           .querySelector(`.${contactStyles.socialsContainerFormSubmit}`)
           ?.classList?.add(`${contactStyles.socialsContainer}`);
@@ -143,22 +131,9 @@ const Contact = () => {
       }
     }, 1000);
 
-    console.log(`isFormSubmit: ${isFormSubmit}`);
     document
       .querySelector(`.${contactStyles.socialsContainerFormSubmit}`)
       ?.classList?.add(`${contactStyles.socialsContainer}`);
-    // Create a p element:
-    // const para = document.createElement('p');
-    // para.setAttribute('id', 'successMessage');
-    // Create a text node:
-    // const node = document.createTextNode('Message Sent!');
-
-    // Append text node to the p element:
-    // para.appendChild(node);
-    // document
-    //   .querySelector(`.${contactStyles.successMessageContainer}`)
-    //   ?.appendChild(para);
-    // para.style.display = 'none';
     return () => clearTimeout(timer);
   };
 
@@ -284,7 +259,6 @@ const Contact = () => {
               cols={30}
               rows={10}
               maxLength={1000}
-              //required
               value={toSend.message}
               className={contactStyles.formMessage}
               onChange={handleInput}
