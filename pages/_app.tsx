@@ -8,17 +8,18 @@ import '../styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      {/* meta tags not available in Next SEO library */}
+      {/* some meta tags not available in Next SEO library */}
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
       </Head>
       <NextSeo
-        defaultTitle="Anwana Ntofon | Home"
+        defaultTitle="Home | Anwana Ntofon"
         additionalMetaTags={[
           {
             name: 'keywords',
-            content: 'web development, programming',
+            content:
+              'web development, programming, front-end web development, portfolio',
           },
         ]}
         additionalLinkTags={[
@@ -27,13 +28,13 @@ export default function App({ Component, pageProps }: AppProps) {
             href: '/favicon.ico',
           },
         ]}
-        description="Oakland-based front-end web developer devoted to crafting accessible and purposeful web experiences."
+        description="Oakland-based web developer devoted to crafting accessible and purposeful web experiences."
         canonical="https://anwanantofon.me"
         openGraph={{
           url: 'https://anwanantofon.me',
-          title: 'Anwana Ntofon | Home',
+          title: 'Home | Anwana Ntofon',
           description:
-            'Oakland-based front-end web developer devoted to crafting accessible and purposeful web experiences.',
+            'Oakland-based web developer devoted to crafting accessible and purposeful web experiences.',
           images: [
             {
               url: '/assets/og-image.png',
@@ -44,7 +45,6 @@ export default function App({ Component, pageProps }: AppProps) {
           ],
         }}
       />
-
       <Nav />
       <Component {...pageProps} />
       <Footer />
