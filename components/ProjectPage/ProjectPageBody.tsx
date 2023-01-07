@@ -16,24 +16,26 @@ const ProjectPageBody = ({ projects, projectId }: ProjectPageProps) => {
           {project.projectDescription}
         </p>
 
-        <div className={projectPageBodyStyles.buttonContainer}>
-          <a
-            href={project.projectDemoUrl}
-            className={projectPageBodyStyles.button}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Demo
-          </a>
-          <a
-            href={project.projectCodeUrl}
-            className={`${projectPageBodyStyles.button} ${projectPageBodyStyles.marginLeft}`}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Code
-          </a>
-        </div>
+        {router.asPath === '/experience/personal/portfolio' ? null : (
+          <div className={projectPageBodyStyles.buttonContainer}>
+            <a
+              href={project.projectDemoUrl}
+              className={projectPageBodyStyles.button}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Demo
+            </a>
+            <a
+              href={project.projectCodeUrl}
+              className={`${projectPageBodyStyles.button} ${projectPageBodyStyles.marginLeft}`}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Code
+            </a>
+          </div>
+        )}
 
         {router.asPath === '/experience' ? null : (
           <Link
