@@ -1,9 +1,9 @@
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
 import Image from 'next/image';
 import { WorkPageProps } from '../data/workPageData';
 import useWindowDimensions from '../hooks/useWindowDimensions';
-import imageCarouselStyles from "../styles/ImageCarousel.module.css"
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+import imageCarouselStyles from '../styles/ImageCarousel.module.css';
 
 const ImageCarousel = ({ work, workId }: WorkPageProps) => {
   const workItem = work[workId];
@@ -28,7 +28,8 @@ const ImageCarousel = ({ work, workId }: WorkPageProps) => {
                 alt={workItem.workPageTitle}
                 width={isMobile && isPortrait ? 225 : 385}
                 height={isMobile && isPortrait ? 225 : 385}
-              className={imageCarouselStyles.galleryImage}></Image>
+                className={imageCarouselStyles.galleryImage}
+              ></Image>
               <p className="legend">{item.caption}</p>
             </div>
           );
