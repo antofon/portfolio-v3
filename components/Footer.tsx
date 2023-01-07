@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import footerStyles from '../styles/Footer.module.css';
-import BackToTop from './BackToTop';
 import { useRouter } from 'next/router';
 import useWindowDimensions from '../hooks/useWindowDimensions';
+import BackToTop from './BackToTop';
+import footerStyles from '../styles/Footer.module.css';
 
 const Footer = () => {
   const [visible, setVisible] = useState('none');
@@ -74,11 +74,12 @@ const Footer = () => {
           : footerStyles.footerExperience
       }
       style={
-        isWorkFooter  
+        isWorkFooter
           ? { backgroundColor: '#FFFFFF' }
-          : isMobile
-          ? { backgroundColor: '#FFFFFF' }
-          : { position: 'absolute', bottom: '0', backgroundColor: '#FFFFFF' }
+          : // for footer to remain at bottom of screen even after hitting 'Back' button
+          homepageFooter && isMobile
+          ? { position: 'relative', bottom: '0', backgroundColor: '#FFFFFF' }
+          : undefined
       }
     >
       <BackToTop visible={visible} />

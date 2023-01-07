@@ -1,4 +1,5 @@
-.footerHomepage,.footerExperience {
+.footerHomepage,
+.footerExperience {
   display: flex;
   flex: 1;
   padding: 1.3rem 0;
@@ -12,21 +13,6 @@
   /* For back to top:  */
   position: relative;
 }
-
-.footerExperience {
-}
-
-/* .footerExperience {
-  display: flex;
-  flex: 1;
-  padding: 1.3rem 0;
-  border-top: 1px solid #e1e1e1;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  width: 100%;
-  margin-top: 4.5rem;
-} */
 
 .footerText {
   margin: 0;
