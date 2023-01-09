@@ -12,7 +12,7 @@ const WorkPageHeader = ({ work, workId }: WorkPageProps) => {
           src={workItem.workPageHeaderImage}
           alt="work page header image"
           fill
-          style={{ objectFit: 'cover', filter: 'blur(8px)' }}
+          style={{ objectFit: 'cover', filter: 'blur(5px)' }}
         />
         <div
           className={
