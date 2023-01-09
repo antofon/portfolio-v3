@@ -33,6 +33,7 @@ const Header = () => {
         <div>
           <a
             href="https://codepen.io/antofon"
+            target="_blank"
             rel="noopener noreferrer"
             className={headerStyles.icon}
           >
