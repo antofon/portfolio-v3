@@ -5,15 +5,12 @@ export interface WorkPageProps {
 
 export interface workPage {
   workPageHeaderImage: string;
-  //   workPageUrl: string;
-  //   projectDemoUrl: string;
-  //   projectCodeUrl: string;
   workPageGallery: [
     { image: string; caption: string },
     { image: string; caption: string },
     { image: string; caption: string }
   ];
-  url: string;
+  workPageUrl: string;
   workPageTitle: string;
   workPagePosition: string;
   workPageDescription: string;
@@ -31,7 +28,8 @@ const workPageData: workPage[] = [
         caption: 'second image',
       },
       {
-        image: '/assets/images/experience/work/guru/guru_exit_intent_pop_up.png',
+        image:
+          '/assets/images/experience/work/guru/guru_exit_intent_pop_up.png',
         caption: 'first image',
       },
       {
@@ -39,10 +37,7 @@ const workPageData: workPage[] = [
         caption: 'third image',
       },
     ],
-    // workPageUrl: '/portfolio',
-    // projectDemoUrl: 'https://anwanantofon.me/',
-    // projectCodeUrl: 'https://github.com/antofon/portfolio-v3',
-    url: 'https://getguru.com/',
+    workPageUrl: 'https://getguru.com/',
     workPageTitle: 'Guru Technologies',
     workPagePosition: 'Web Engineer II',
     workId: 0,
@@ -52,9 +47,6 @@ const workPageData: workPage[] = [
   {
     workPageHeaderImage:
       '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
-    // workPageUrl: '/stemreads',
-    // projectDemoUrl: 'https://stem-reads.netlify.app/',
-    // projectCodeUrl: 'https://github.com/antofon/stem-reads',
     workPageGallery: [
       {
         image:
@@ -72,20 +64,18 @@ const workPageData: workPage[] = [
         caption: 'third image',
       },
     ],
-    url: 'https://www.facebook.com/business/m/guide-to-2020-holidays/checklist',
+    workPageUrl:
+      'https://www.facebook.com/business/m/guide-to-2020-holidays/checklist',
     // workPageTitle: 'Crystal Equation Corporation at Facebook (now Meta)',
     workPageTitle: 'Facebook (now Meta)',
     workPagePosition: 'CMS Specialist',
     workPageDescription:
-      'As a CMS Specialist at Facebook (Now Meta) I worked on the Facebook Business and Instagram Business teams to create web assets for SMBs. These web assets included emails, AYMTs (Actions You May Take) and landing pages for specific campaigns. AYMTs provide helpful suggestions to help improve the results for a user\'s Facebook business activity. One of the projects I enjoyed the most was the 2020 Holiday Marketing Guide. It was a comprehensive layout of how to best connect with customers, improve your execution strategy, and grow your audience. I utilized HTML and CSS on the job and learn how to major web content accessible across dozens of locales.',
+      "As a CMS Specialist at Facebook (Now Meta) I worked on the Facebook Business and Instagram Business teams to create web assets for SMBs. These web assets included emails, AYMTs (Actions You May Take) and landing pages for specific campaigns. AYMTs provide helpful suggestions to help improve the results for a user's Facebook business activity. One of the projects I enjoyed the most was the 2020 Holiday Marketing Guide. It was a comprehensive layout of how to best connect with customers, improve your execution strategy, and grow your audience. I utilized HTML and CSS on the job and learn how to major web content accessible across dozens of locales.",
     workId: 1,
   },
   {
     workPageHeaderImage:
       '/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg',
-    // workPageUrl: '/wikipedia',
-    // projectDemoUrl: 'https://antofon.github.io/wikipediaviewer/',
-    // projectCodeUrl: 'https://github.com/antofon/wikipediaviewer',
     workPageGallery: [
       {
         image: '/assets/images/experience/work/art/art_1.png',
@@ -100,7 +90,7 @@ const workPageData: workPage[] = [
         caption: 'third image',
       },
     ],
-    url: 'https://www.art.com/',
+    workPageUrl: 'https://www.art.com/',
     workPageTitle: 'Art.com',
     workPagePosition: 'Jr. Front-End Web Developer',
     workPageDescription:

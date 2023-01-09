@@ -2,6 +2,7 @@ export interface ProjectPageProps {
   projects: ProjectPage[];
   projectId: number;
 }
+
 export interface ProjectPage {
   projectPageHeaderImage: string;
   projectPageUrl: string;
@@ -21,10 +22,10 @@ const projectPageData: ProjectPage[] = [
     projectDemoUrl: 'https://anwanantofon.me/',
     projectCodeUrl: 'https://github.com/antofon/portfolio-v3',
     projectPageTitle: 'Portfolio Website',
-    projectId: 0,
     projectDescription:
       'This is the third iteration of my Portfolio. It was an exciting challenge for me to apply my Next.js and TypeScript skills to a real-world project.',
     projectPageStack: ['React.js', 'Next.js', 'TypeScript', 'CSS Modules'],
+    projectId: 0,
   },
   {
     projectPageHeaderImage:
@@ -35,8 +36,8 @@ const projectPageData: ProjectPage[] = [
     projectPageTitle: 'StemReads',
     projectDescription:
       'This is a React web application I created to highlight leaders in STEM. Users can create their own accounts and view a dashboard of selected readings. Upon login, they are able to interact with the dashboard (i.e. delete books, reload to default state, etc).',
-    projectId: 1,
     projectPageStack: ['React.js', 'Sass', 'Firebase'],
+    projectId: 1,
   },
   {
     projectPageHeaderImage:
@@ -47,8 +48,8 @@ const projectPageData: ProjectPage[] = [
     projectPageTitle: 'Wikipedia Viewer',
     projectDescription:
       'Welcome to the Wikipedia Viewer! This is a legacy project under the freeCodeCamp curriculum for the Front-End Developer Track. This JavaScript app allows users to search for information using the Media Wiki API. Users can also redirect to random articles by clicking the link “View a Random Article” in the app.',
-    projectId: 2,
     projectPageStack: ['HTML', 'CSS', 'JavaScript', 'Wikipedia API'],
+    projectId: 2,
   },
   {
     projectPageHeaderImage:
@@ -59,8 +60,8 @@ const projectPageData: ProjectPage[] = [
     projectPageTitle: 'Twitch Viewer',
     projectDescription:
       'Welcome to the Twitch Viewer! This is a legacy project under the freeCodeCamp curriculum for the Front-End Developer Track. This JavaScript app uses the Twitch API (v5) to display online and offline streamers. The data is present in the script.js file.',
-    projectId: 3,
     projectPageStack: ['HTML', 'CSS', 'JavaScript', 'Twitch API'],
+    projectId: 3,
   },
 ];
 

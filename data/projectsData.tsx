@@ -1,6 +1,7 @@
 export interface ProjectsProps {
   projects: Projects[];
 }
+
 export interface Projects {
   projectsImage: string;
   projectsTitle: string;
