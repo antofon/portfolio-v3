@@ -10,7 +10,7 @@ const WorkPageHeader = ({ work, workId }: WorkPageProps) => {
         <div className={workPageHeaderStyles.bgOverlay}></div>
         <Image
           src={workItem.workPageHeaderImage}
-          alt="alt text"
+          alt="work page header image"
           fill
           style={{ objectFit: 'cover', filter: 'blur(8px)' }}
         />

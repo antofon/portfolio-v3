@@ -1,12 +1,9 @@
-import Link from 'next/link';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 import { WorkPageProps } from '../../data/workPageData';
 import workPageBodyStyles from '../../styles/WorkPage/WorkPageBody.module.css';
 
 const WorkPageBody = ({ work, workId }: WorkPageProps) => {
   const workItem = work[workId];
-  const router = useRouter();
   return (
     <div className={workPageBodyStyles.projectBody}>
       <div>
