@@ -11,7 +11,7 @@ const WorkPageBody = ({ work, workId }: WorkPageProps) => {
         <p className={workPageBodyStyles.projectDescription}>
           {workItem.workPageDescription}{' '}
           <a
-            href={workItem.url}
+            href={workItem.workPageUrl}
             rel="nofollow noreferrer"
             target="_blank"
             style={{ textDecoration: 'underline' }}
