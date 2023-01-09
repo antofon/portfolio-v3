@@ -1,8 +1,6 @@
-import React from 'react';
 import Image from 'next/image';
 import { ProjectPageProps } from '../../data/projectPageData';
 import projectPageHeaderStyles from '../../styles/ProjectPage/ProjectPageHeader.module.css';
-import projectImg from '../../public/assets/images/about/joshua-woroniecki-lzh3hPtJz9c-unsplash.jpeg';
 
 const ProjectPageHeader = ({ projects, projectId }: ProjectPageProps) => {
   const project = projects[projectId];
@@ -11,10 +9,10 @@ const ProjectPageHeader = ({ projects, projectId }: ProjectPageProps) => {
       <div className={projectPageHeaderStyles.bgContainer}>
         <div className={projectPageHeaderStyles.bgOverlay}></div>
         <Image
-          src={projectImg}
-          alt="alt text"
+          src={project.projectPageHeaderImage}
+          alt="project page header image"
           fill
-          style={{ objectFit: 'cover' }}
+          style={{ objectFit: 'cover', filter: 'blur(5px)' }}
         />
         <div className={projectPageHeaderStyles.headerText}>
           <h2>{project.projectPageTitle}</h2>

@@ -1,21 +1,20 @@
-import projectPageBodyStyles from '../../styles/ProjectPage/ProjectPageBody.module.css';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { ProjectPageProps } from '../../data/projectPageData';
 import { FaDotCircle } from 'react-icons/fa';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
+import projectPageBodyStyles from '../../styles/ProjectPage/ProjectPageBody.module.css';
 
 const ProjectPageBody = ({ projects, projectId }: ProjectPageProps) => {
   const project = projects[projectId];
   const router = useRouter();
   return (
     <div className={projectPageBodyStyles.projectBody}>
-      <div className={projectPageBodyStyles.projectBodyText}>
+      <div>
         <p className={projectPageBodyStyles.bodyProjectTitle}>Project</p>
         <h2 className={projectPageBodyStyles.bodyOverviewTitle}>Overview</h2>
         <p className={projectPageBodyStyles.projectDescription}>
           {project.projectDescription}
         </p>
-
         {router.asPath === '/experience/personal/portfolio' ? null : (
           <div className={projectPageBodyStyles.buttonContainer}>
             <a
@@ -36,7 +35,6 @@ const ProjectPageBody = ({ projects, projectId }: ProjectPageProps) => {
             </a>
           </div>
         )}
-
         {router.asPath === '/experience' ? null : (
           <Link
             href="/#experience"
