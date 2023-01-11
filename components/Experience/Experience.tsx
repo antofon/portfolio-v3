@@ -25,16 +25,16 @@ const Experience = () => {
   };
 
   return (
-    <div id="experience" className={experienceStyles.container}>
+    <section id="experience" className={experienceStyles.container} aria-labelledby="experience">
       <h2 className={experienceStyles.sectionTitle}>EXPERIENCE</h2>
       {activeExperience ? (
-        <p className={experienceStyles.sectionDescription}>
+        <h3 className={experienceStyles.sectionDescription}>
           Where {"I've"} Worked
-        </p>
+        </h3>
       ) : (
-        <p className={experienceStyles.sectionDescription}>
+        <h3 className={experienceStyles.sectionDescription}>
           What {"I've"} Built
-        </p>
+        </h3>
       )}
       <div className={experienceStyles.links}>
         <a
@@ -54,7 +54,7 @@ const Experience = () => {
           <ProjectsList projects={projectData} />
         )}
       </div>
-    </div>
+    </section>
   );
 };
 

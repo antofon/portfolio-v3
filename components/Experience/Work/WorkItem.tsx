@@ -9,7 +9,7 @@ const WorkItem = ({ workImage, workName, workTitle, workUrl }: Work) => {
       <div className={experienceItemStyles.imageCol}>
         <Image
           src={workImage}
-          alt={workName}
+          alt=""
           width={500}
           height={500}
           className={experienceItemStyles.img}
