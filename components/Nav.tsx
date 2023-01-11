@@ -92,32 +92,48 @@ const Navbar = () => {
           Anwana Ntofon
         </p>
       </div>
-      <>
+      <div>
         {typeof width !== 'undefined' && width < 768 ? (
           isMobileMenuOpen ? null : (
             <HiOutlineBars3
               size={40}
               onClick={openMobileMenu}
               style={{ color: `${mobileCloseColor}`, cursor: 'pointer' }}
+              aria-controls="menu"
             />
           )
         ) : isMobileMenuOpen ? null : (
-          <ul className={navStyles.links} style={{ color: `${linkColor}` }}>
-            <Link href="/">
-              <li className={navStyles.link}>Home</li>
-            </Link>
-            <Link href="/#about">
-              <li className={navStyles.link}>About</li>
-            </Link>
-            <Link href="/#skills">
-              <li className={navStyles.link}>Skills</li>
-            </Link>
-            <Link href="/#experience">
-              <li className={navStyles.link}>Experience</li>
-            </Link>
-            <Link href="/#contact">
-              <li className={navStyles.link}>Contact</li>
-            </Link>
+          <ul
+            className={navStyles.links}
+            style={{ color: `${linkColor}` }}
+            role="menu"
+            aria-labelledby="menubutton"
+          >
+            <li className={navStyles.link} role="presentation">
+              <Link href="/" role="menuitem">
+                Home
+              </Link>
+            </li>
+            <li className={navStyles.link} role="presentation">
+              <Link href="/#about" role="menuitem">
+                About
+              </Link>
+            </li>
+            <li className={navStyles.link} role="presentation">
+              <Link href="/#skills" role="menuitem">
+                Skills
+              </Link>
+            </li>
+            <li className={navStyles.link} role="presentation">
+              <Link href="/#experience" role="menuitem">
+                Experience
+              </Link>
+            </li>
+            <li className={navStyles.link} role="presentation">
+              <Link href="/#contact" role="menuitem">
+                Contact
+              </Link>
+            </li>
           </ul>
         )}
         {isMobileMenuClosed ? null : (
@@ -129,7 +145,7 @@ const Navbar = () => {
             setIsMobileMenuClosed={setIsMobileMenuClosed}
           />
         )}
-      </>
+      </div>
     </nav>
   );
 };
