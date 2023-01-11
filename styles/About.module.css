@@ -15,8 +15,15 @@
 
 .sectionTitle {
   text-transform: uppercase;
-  color: #38b6ff;
+  
+  /* color: #38b6ff; */
+  /* passes low contrast test for accessibility */
+  /* color: #154f70; */
+  /* color: #1873a9; */
+  /* color: #0b77c9; */
+  color: #1279c8;
   font-weight: 400;
+  
   font-size: 22px;
 }
 

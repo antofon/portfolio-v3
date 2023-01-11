@@ -4,11 +4,11 @@ import aboutImg from '../public/assets/images/about/profile_headshot.jpg';
 
 const About = () => {
   return (
-    <div id="about" className={aboutStyles.container}>
+    <section id="about" className={aboutStyles.container} aria-labelledby="about">
       <div className={aboutStyles.grid}>
         <div className={aboutStyles.textCol}>
           <h2 className={aboutStyles.sectionTitle}>ABOUT</h2>
-          <p className={aboutStyles.sectionDescription}>Who I Am</p>
+          <h3 className={aboutStyles.sectionDescription}>Who I Am</h3>
           <div className={aboutStyles.imageAboveCopy}>
             <Image
               src={aboutImg}
@@ -36,14 +36,14 @@ const About = () => {
         <div className={aboutStyles.imageCol}>
           <Image
             src={aboutImg}
-            alt="about section profile image"
+            alt=""
             height={500}
             width={500}
             className={aboutStyles.img}
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
