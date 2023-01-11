@@ -138,9 +138,9 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className={contactStyles.container}>
+    <section id="contact" className={contactStyles.container} aria-labelledby="contact">
       <h2 className={contactStyles.sectionTitle}>CONTACT</h2>
-      <p className={contactStyles.sectionDescription}>Get In Touch</p>
+      <h3 className={contactStyles.sectionDescription}>Get In Touch</h3>
       <div className={contactStyles.wrapper}>
         {/* <div className={contactStyles.connectContainer}>
           <Image
@@ -276,7 +276,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

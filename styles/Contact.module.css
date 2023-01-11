@@ -6,7 +6,8 @@
 
 .sectionTitle {
   text-transform: uppercase;
-  color: #38b6ff;
+  /* color: #38b6ff; */
+  color: #1279c8;
   font-weight: 400;
   font-size: 22px;
 }
