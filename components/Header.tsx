@@ -10,36 +10,43 @@ const Header = () => {
         <span className={headerStyles.name}>purposeful</span> web experiences.
       </h1>
       <div className={headerStyles.socials}>
-        <div>
-          <a
-            href="https://www.linkedin.com/in/anwanantofon/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={headerStyles.icon}
-          >
+        <a
+          href="https://www.linkedin.com/in/anwanantofon/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={headerStyles.icon}
+        >
+          <span aria-hidden="true">
             <FaLinkedinIn />
-          </a>
-        </div>
-        <div>
-          <a
-            href="https://github.com/antofon"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={headerStyles.icon}
-          >
+          </span>
+          <span className={headerStyles.visuallyHidden}>
+            Social link to LinkedIn account
+          </span>
+        </a>
+        <a
+          href="https://github.com/antofon"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={headerStyles.icon}
+        >
+          <span aria-hidden="true">
             <FaGithub />
-          </a>
-        </div>
-        <div>
-          <a
-            href="https://codepen.io/antofon"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={headerStyles.icon}
-          >
+          </span>
+          <span className={headerStyles.visuallyHidden}>Social link to GitHub account</span>
+        </a>
+        <a
+          href="https://codepen.io/antofon"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={headerStyles.icon}
+        >
+          <span aria-hidden="true">
             <FaCodepen />
-          </a>
-        </div>
+          </span>
+          <span className={headerStyles.visuallyHidden}>
+            Social link to CodePen account
+          </span>
+        </a>
       </div>
     </div>
   );
