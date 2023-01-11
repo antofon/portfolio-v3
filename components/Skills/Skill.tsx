@@ -5,17 +5,13 @@ import skillStyles from '../../styles/Skills/Skill.module.css';
 const Skill = ({ skillsIcon, skillsTitle }: Skills) => {
   return (
     <div className={skillStyles.card}>
-      <div>
-        <Image
-          src={skillsIcon}
-          alt={skillsTitle}
-          width={75}
-          height={75}
-        ></Image>
-      </div>
-      <div>
-        <p className={skillStyles.skillName}>{skillsTitle}</p>
-      </div>
+      <Image
+        src={skillsIcon}
+        alt={`Skill: ${skillsTitle}`}
+        width={75}
+        height={75}
+      ></Image>
+      <h4 className={skillStyles.skillName}>{skillsTitle}</h4>
     </div>
   );
 };

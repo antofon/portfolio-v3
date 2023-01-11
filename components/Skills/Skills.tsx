@@ -4,11 +4,11 @@ import skillsStyles from '../../styles/Skills/Skills.module.css';
 
 const Skills = () => {
   return (
-    <div id="skills" className={skillsStyles.container}>
-      <p className={skillsStyles.sectionTitle}>Skills</p>
-      <h2 className={skillsStyles.sectionDescription}>What I Can Do</h2>
+    <section id="skills" className={skillsStyles.container} aria-labelledby="skills">
+      <h2 className={skillsStyles.sectionTitle}>Skills</h2>
+      <h3 className={skillsStyles.sectionDescription}>What I Can Do</h3>
       <SkillsList skills={skillsData} />
-    </div>
+    </section>
   );
 };
 
