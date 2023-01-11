@@ -31,10 +31,11 @@ const BackToTop = ({ visible }: BackToTop) => {
     <>
       {isBackToTop ? (
         <div className={backToTopStyles.container} style={{ display: visible }}>
-          <Link href="/">
+          <Link href="/" aria-hidden="true">
             <div className={backToTopStyles.chevronContainer}>
               <FaChevronUp />
               <FaChevronUp className={backToTopStyles.bottomChevron} />
+              <span className={backToTopStyles.visuallyHidden}>Back to top button</span>
             </div>
           </Link>
         </div>
