@@ -70,7 +70,8 @@
 }
 
 .mobileConnect {
-  color: #38b6ff;
+  /* color: #38b6ff; */
+  color: #1279c8;
   text-transform: uppercase;
   font-size: 1.2rem;
   font-weight: 500;
