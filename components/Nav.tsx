@@ -95,12 +95,14 @@ const Navbar = () => {
       <div>
         {typeof width !== 'undefined' && width < 768 ? (
           isMobileMenuOpen ? null : (
-            <HiOutlineBars3
-              size={40}
-              onClick={openMobileMenu}
-              style={{ color: `${mobileCloseColor}`, cursor: 'pointer' }}
-              aria-controls="menu"
-            />
+            <button aria-label="Open the menu" className={navStyles.menuIcon}>
+              <HiOutlineBars3
+                size={40}
+                onClick={openMobileMenu}
+                style={{ color: `${mobileCloseColor}`, cursor: 'pointer' }}
+                aria-hidden="true"
+              />
+            </button>
           )
         ) : isMobileMenuOpen ? null : (
           <ul
