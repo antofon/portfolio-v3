@@ -25,7 +25,11 @@ const Experience = () => {
   };
 
   return (
-    <section id="experience" className={experienceStyles.container} aria-labelledby="experience">
+    <section
+      id="experience"
+      className={experienceStyles.container}
+      aria-labelledby="experience"
+    >
       <h2 className={experienceStyles.sectionTitle}>EXPERIENCE</h2>
       {activeExperience ? (
         <h3 className={experienceStyles.sectionDescription}>
@@ -40,10 +44,15 @@ const Experience = () => {
         <a
           onClick={handleActiveExperience}
           className={`${experienceStyles.link} ${experienceStyles.active}`}
+          role="button"
         >
           Work
         </a>
-        <a onClick={handleActiveExperience} className={experienceStyles.link}>
+        <a
+          onClick={handleActiveExperience}
+          className={experienceStyles.link}
+          role="button"
+        >
           Personal
         </a>
       </div>
