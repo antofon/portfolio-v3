@@ -25,7 +25,7 @@
   right: 15px;
 }
 
-.menuClose {
+.menuCloseContainer {
   border-radius: 50%;
   background: #fff;
   display: flex;
@@ -33,13 +33,18 @@
   align-items: center;
   width: 40px;
   height: 40px;
-  cursor: pointer;
   box-shadow: 0 8px 9px #9ca3af;
   transition: all 0.3s;
 }
 
-.menuClose:hover {
+.menuCloseContainer:hover {
   transform: scale(1.05);
+}
+
+.menuClose {
+  background:none;
+  border:none;
+  cursor: pointer;
 }
 
 .menuTagline {
@@ -100,6 +105,23 @@
 
 .icon:hover {
   transform: scale(1.05);
+}
+
+/**
+ * Visually hide an element, but leave it available for screen readers
+ * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
+ * @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ * @link https://github.com/h5bp/main.css/issues/12#issuecomment-321106995
+ */
+.visuallyHidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 @media screen and (min-width: 768px) {

@@ -32,48 +32,65 @@ const MobileNav = ({
                 className={mobileNavStyles.logo}
                 priority={true}
               />
-              <div className={mobileNavStyles.menuClose}>
-                <RxCross2 onClick={closeMobileMenu} size={25} />
+              <div className={mobileNavStyles.menuCloseContainer}>
+                <button aria-label="Close" onClick={closeMobileMenu} className={mobileNavStyles.menuClose}>
+                  <RxCross2 size={25} aria-hidden="true"/>
+                </button>
               </div>
             </div>
             <p className={mobileNavStyles.menuTagline}>Menu</p>
             <hr />
-            <ul className={mobileNavStyles.links}>
-              <Link
-                href="/"
-                className={mobileNavStyles.link}
-                onClick={menuLinkClicked}
-              >
-                <li>Home</li>
-              </Link>
-              <Link
-                href="/#about"
-                className={mobileNavStyles.link}
-                onClick={menuLinkClicked}
-              >
-                <li>About</li>
-              </Link>
-              <Link
-                href="/#skills"
-                className={mobileNavStyles.link}
-                onClick={menuLinkClicked}
-              >
-                <li>Skills</li>
-              </Link>
-              <Link
-                href="/#experience"
-                className={mobileNavStyles.link}
-                onClick={menuLinkClicked}
-              >
-                <li>Experience</li>
-              </Link>
-              <Link
-                href="/#contact"
-                className={mobileNavStyles.link}
-                onClick={menuLinkClicked}
-              >
-                <li>Contact</li>
-              </Link>
+            <ul
+              className={mobileNavStyles.links}
+              id="mobilemenubutton"
+              role="menu"
+              aria-labelledby="mobilemenubutton"
+            >
+              <li role="presentation">
+                <Link
+                  href="/"
+                  className={mobileNavStyles.link}
+                  onClick={menuLinkClicked}
+                >
+                  Home
+                </Link>
+              </li>
+              <li role="presentation">
+                <Link
+                  href="/#about"
+                  className={mobileNavStyles.link}
+                  onClick={menuLinkClicked}
+                >
+                  About
+                </Link>
+              </li>
+              <li role="presentation">
+                <Link
+                  href="/#skills"
+                  className={mobileNavStyles.link}
+                  onClick={menuLinkClicked}
+                >
+                  Skills
+                </Link>
+              </li>
+              <li role="presentation">
+                <Link
+                  href="/#experience"
+                  className={mobileNavStyles.link}
+                  onClick={menuLinkClicked}
+                >
+                  Experience
+                </Link>
+              </li>
+              <li role="presentation">
+                <Link
+                  href="/#contact"
+                  className={mobileNavStyles.link}
+                  onClick={menuLinkClicked}
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
             <div className={mobileNavStyles.mobileConnectContainer}>
               <p className={mobileNavStyles.mobileConnect}>{"Let's"} Connect</p>
@@ -84,7 +101,12 @@ const MobileNav = ({
                   rel="noopener noreferrer"
                   className={mobileNavStyles.icon}
                 >
-                  <FaLinkedinIn />
+                  <span aria-hidden="true">
+                    <FaLinkedinIn />
+                  </span>
+                  <span className={mobileNavStyles.visuallyHidden}>
+                    Social mobile link to LinkedIn account
+                  </span>
                 </a>
                 <a
                   href="https://github.com/antofon"
@@ -92,7 +114,12 @@ const MobileNav = ({
                   rel="noopener noreferrer"
                   className={mobileNavStyles.icon}
                 >
-                  <FaGithub />
+                  <span aria-hidden="true">
+                    <FaGithub />
+                  </span>
+                  <span className={mobileNavStyles.visuallyHidden}>
+                    Social mobile link to GitHub account
+                  </span>
                 </a>
                 <a
                   href="https://codepen.io/antofon"
@@ -100,7 +127,12 @@ const MobileNav = ({
                   rel="noopener noreferrer"
                   className={mobileNavStyles.icon}
                 >
-                  <FaCodepen />
+                  <span aria-hidden="true">
+                    <FaCodepen />
+                  </span>
+                  <span className={mobileNavStyles.visuallyHidden}>
+                    Social mobile link to CodePen account
+                  </span>
                 </a>
               </div>
             </div>
