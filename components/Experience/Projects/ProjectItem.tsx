@@ -14,7 +14,7 @@ const Project = ({
       <div className={experienceItemStyles.imageCol}>
         <Image
           src={projectsImage}
-          alt=""
+          alt={`Profile pic of ${projectsTitle}`}
           width={500}
           height={500}
           className={experienceItemStyles.img}

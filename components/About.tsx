@@ -12,7 +12,7 @@ const About = () => {
           <div className={aboutStyles.imageAboveCopy}>
             <Image
               src={aboutImg}
-              alt="about image"
+              alt="Profile pic of Anwana Ntofon"
               height={500}
               width={500}
               className={aboutStyles.img}
@@ -36,7 +36,7 @@ const About = () => {
         <div className={aboutStyles.imageCol}>
           <Image
             src={aboutImg}
-            alt=""
+            alt="Profile pic of Anwana Ntofon"
             height={500}
             width={500}
             className={aboutStyles.img}
