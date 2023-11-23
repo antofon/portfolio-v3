@@ -28,13 +28,13 @@ export default function App({ Component, pageProps }: AppProps) {
             href: '/favicon.ico',
           },
         ]}
-        description="Oakland-based web developer devoted to crafting accessible and purposeful web experiences."
+        description="Holistic web developer devoted to crafting accessible and purposeful web experiences."
         canonical="https://anwanantofon.me"
         openGraph={{
           url: 'https://anwanantofon.me',
           title: 'Home | Anwana Ntofon',
           description:
-            'Oakland-based web developer devoted to crafting accessible and purposeful web experiences.',
+            'Holistic web developer devoted to crafting accessible and purposeful web experiences.',
           images: [
             {
               url: '/assets/og-image.png',

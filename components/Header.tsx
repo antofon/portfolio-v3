@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className={headerStyles.container}>
       <h1 className={headerStyles.sectionTitle}>
-        Oakland-based web developer devoted to crafting{' '}
+        Holistic web developer devoted to crafting{' '}
         <span className={headerStyles.name}>accessible</span> and{' '}
         <span className={headerStyles.name}>purposeful</span> web experiences.
       </h1>
