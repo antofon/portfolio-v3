@@ -83,7 +83,7 @@ const Footer = () => {
       }
     >
       <BackToTop visible={visible} />
-      <p className={footerStyles.footerText}>© 2023 by Anwana Ntofon</p>
+      <p className={footerStyles.footerText}>© 2024 by Anwana Ntofon</p>
     </footer>
   );
 };
